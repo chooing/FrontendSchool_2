@@ -1,0 +1,68 @@
+/* Reset css */
+body, ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1{
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* design */
+.bg{
+    width: auto;
+    height: 100vh;
+    min-height: 970px;
+    background-color: #dddddd;
+    padding: 100px;
+}
+.wrapper{
+    width: 500px;
+    margin: 0 auto;
+}
+.bucket-list{
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0 rgba(98, 98, 98, 0.1);
+    overflow: hidden;
+}
+.header{
+    background-color: #fff;
+    padding: 35px 0;
+    border-bottom: 5px solid #eeeeee;
+}
+.header .title{
+    padding-left: 30px;
+    font-size: 22px;
+    color: #ff1593;
+    font-weight: bold;
+    border-left: 9px solid #ff1593;
+}
+
+.contents{
+    padding: 35px;
+}
+
+.list li{
+    border: 4px solid #eeeeee;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: #999;
+    background-color: #fff;
+}
+
+.list li:last-child{
+    margin-bottom: 0;
+}
+
+.list li:hover{
+    border-color: #1c90ff;
+    color: #1c90ff;
+}
