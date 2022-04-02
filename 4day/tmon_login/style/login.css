@@ -1,0 +1,105 @@
+/* reset + header + footer */
+@import url(./common.css);
+
+/* login-form */
+.login-form{
+    
+}
+
+.login-wrap{ margin: 10px 0; }
+.login-wrap label{ width: 100%;}
+
+.user-typing {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    border: 1px solid #d7d7d7;
+    font-size: 18px;
+}
+.user-typing:focus {
+    border-color: #ff5000;
+}
+
+.checkbox-wrap{
+    padding: 10px 0;
+}
+
+.checkbox-wrap label{
+    vertical-align: top;
+    line-height: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.checkbox-wrap label:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #d7d7d7;
+    position: absolute; 
+    left: -24px;
+    
+}
+#userIdSave{
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+}
+#userIdSave:checked:after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff5000;
+    margin: 5px;
+    visibility:visible
+}
+
+.login-btn{
+    width: 100%;
+    background-color: #ff5000;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+}
+
+/*find-wrap*/
+.find-wrap{
+    margin-top: 20px;
+}
+
+.find-wrap li{
+    padding-right: 20px;
+    position: relative;
+}
+.find-wrap li::after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background-color: #aaa;
+    position: absolute;
+    right: 7px;
+    bottom: 3px;
+}
+.find-wrap li:last-child{padding: 0;}
+.find-wrap li:last-child:after{
+    display: none;
+}
+
+/* sns-login */
+.sns-login{
+    margin-top: 30px;
+}
+
+.sns-login button{
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid #d7d7d7;    
+    line-height: 50px;
+    cursor: pointer;
+} 

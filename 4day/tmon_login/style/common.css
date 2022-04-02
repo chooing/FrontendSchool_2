@@ -1,0 +1,73 @@
+/* reset css */
+body, h1,h2, fieldset, legend, p, input, button,ul,li{
+    padding: 0;
+    margin: 0;
+}
+h1,h2, button{
+    font-size: inherit;
+    font-weight: initial;
+}
+a{
+    text-decoration: none;
+    color: initial;
+}
+fieldset{
+    border: none;
+}
+legend{
+    height: 0;
+    text-indent: -9999px; 
+}
+
+label{
+    display: inline-block;
+}
+input, button{
+    border-radius: 0;
+    border: 0;
+}
+input:focus{ outline: none; }
+button{ background-color: transparent; }
+
+ul{list-style-type: none ;}
+
+/* wrapping */
+.wrapping{
+    width: 460px;
+    margin: 50px auto;
+}
+
+/* header */
+.header{
+    height: 89px; 
+    border-bottom: 1px solid #ddd;  
+}
+
+.header .title{
+    text-indent: -9999px; 
+}
+
+.header .logo{
+    display: block;
+    width: 160px;
+    height: 90px;
+    margin: auto;
+    background-image: url(../img/timon_logo.jpg);
+    background-repeat: no-repeat;
+    background-size: 160px 70px;
+    background-position: center center;
+}
+/* sub-title */
+.sub-title{
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.list-center{
+    text-align: center;
+}
+.list-center li{
+    display: inline-block;
+}

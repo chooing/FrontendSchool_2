@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/login.css">
+
+    <title>티몬 로그인</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">
+            <a class="logo" href="https://www.tmon.co.kr/">티몬 홈페이지 바로가기</a>
+        </h1>
+    </header>
+    <div class="wrapping">
+        <section class="login-form">
+            <h2 class="sub-title">로그인</h2>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>로그인 정보</legend>
+                    <p class="login-wrap">
+                        <label>
+                            <input class="user-id user-typing" type="text" id="userId" placeholder="아이디">
+                        </label>
+                    </p> 
+                    <p class="login-wrap">
+                        <label>
+                            <input class="user-pw user-typing" type="password" id="userPw" placeholder="비밀번호">
+                        </label>
+                    </p> 
+                    <p class="checkbox-wrap">
+                        <input type="checkbox" name="userIdSave" id="userIdSave">
+                        <label for="userIdSave"> 로그인 상태 유지</label>
+                    </p>
+                    <button class="login-btn" type="submit">로그인</button>
+                </fieldset>
+            </form>
+            <ul class="find-wrap list-center">
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="./agree.html">회원가입</a></li>
+            </ul>
+            <article class="sns-login">
+                <button type="button">네이버로 시작하기</button>
+                <button type="button">카카오톡으로 시작하기</button>
+                <button type="button">페이스북으로 시작하기</button>
+                <button type="button">구글로 시작하기</button>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
