@@ -1,0 +1,81 @@
+/* reset css */
+body, h1,h2, fieldset, legend, p, input, button,ul,li{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #000;
+}
+h1,h2, button{
+    font-size: inherit;
+    font-weight: initial;
+}
+a{
+    text-decoration: none;
+    color: initial;
+}
+fieldset{
+    border: none;
+}
+legend{
+    height: 0;
+    text-indent: -9999px; 
+}
+
+label{
+    display: inline-block;
+}
+input, button{
+    border-radius: 0;
+    border: 0;
+}
+input:focus{ outline: none; }
+button{ background-color: transparent; }
+
+ul{list-style-type: none ;}
+
+/* wrapping */
+.wrapping{
+    width: 650px;
+    margin: 65px auto;
+}
+
+/* header */
+
+.header{ 
+    padding: 0 60px;
+    height: 90px;
+
+}
+
+.header .title{
+    height: inherit;
+    text-indent: -9999px; 
+}
+
+.header .logo{
+    display: block;
+    width: 110px;
+    height: 90px;
+    background-image: url(../img/tving_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+}
+/* sub-title */
+.sub-title{
+    font-size: 36px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 45px;
+    letter-spacing: -1.2px;
+}
+
+.list-center{
+    text-align: center;
+}
+.list-center li{
+    display: inline-block;
+}
