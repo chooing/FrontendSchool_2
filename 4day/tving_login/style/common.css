@@ -3,50 +3,44 @@ body, h1,h2, fieldset, legend, p, input, button,ul,li{
     padding: 0;
     margin: 0;
 }
-body{
-    background-color: #000;
-}
+body{ background-color: #000; }
 h1,h2, button{
     font-size: inherit;
     font-weight: initial;
 }
 a{
     text-decoration: none;
-    color: initial;
+    color: inherit;
 }
-fieldset{
-    border: none;
-}
+fieldset{ border: none; }
 legend{
     height: 0;
     text-indent: -9999px; 
 }
-
-label{
-    display: inline-block;
-}
+label{display: inline-block;}
 input, button{
     border-radius: 0;
     border: 0;
 }
 input:focus{ outline: none; }
-button{ background-color: transparent; }
-
+button{ 
+    background-color: transparent; 
+    cursor: pointer; 
+}
 ul{list-style-type: none ;}
+small{font-size: inherit;}
+address {font-style: normal;}
 
 /* wrapping */
-.wrapping{
+.wrapping{ margin: 0 60px; }
+.content-wrapping{
     width: 650px;
     margin: 65px auto;
 }
 
 /* header */
 
-.header{ 
-    padding: 0 60px;
-    height: 90px;
-
-}
+.header{ height: 90px;}
 
 .header .title{
     height: inherit;
@@ -60,22 +54,97 @@ ul{list-style-type: none ;}
     background-image: url(../img/tving_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center center;
+    background-position: center;
 
 }
+
 /* sub-title */
 .sub-title{
-    font-size: 36px;
     text-align: center;
-    font-weight: 700;
     color: #fff;
     margin-bottom: 45px;
     letter-spacing: -1.2px;
 }
+.sub-title h2{
+    font-size: 37px;
+    font-weight: 700;
+}
+.sub-title p{
+    font-size: 25px;
+    padding-top: 15px;
+    font-weight: 300;
+    color: #888;
+}
 
-.list-center{
-    text-align: center;
+/* footer */
+.footer{
+    margin-top: 120px;
+    padding-bottom: 155px;
 }
-.list-center li{
-    display: inline-block;
+
+.footer-link{
+    color: #a3a3a3;
+    font-size: 19px;
+    overflow: hidden;
+    font-weight: 400;
+    border-top: 1px solid #212121;
+    padding: 20px 0;
 }
+.footer-link li{
+    padding-right: 38px;
+    float: left;
+}
+.footer-link li:nth-of-type(3){font-weight: 700;}
+
+/* address */
+.address{
+    padding-bottom: 30px;
+    color: #6e6e6e;
+    font-size: 16.5px;
+}
+
+.info-list .info-list-col{ padding-bottom: 5px; }
+.info-list-col ul{ overflow: hidden; }
+.info-list-col ul li{
+    padding: 0 9px ;
+    float: left;
+    position: relative;
+}
+.info-list-col ul li:first-child{ padding-left: 0; }
+
+.info-list-col ul li::after{
+    content: '';
+    width: 1px;
+    height: 10px;
+    background-color: #2e2e2e;
+    position: absolute;
+    right: 0;
+    bottom: calc(50% - 5px);
+}
+.info-list-col ul li:last-child:after{ display: none;}
+.info-list-col ul li a{text-decoration: underline;}
+
+/* sns-list */
+.sns-list{ 
+    padding-bottom: 24px; 
+    overflow: hidden;
+}
+.sns-list li {
+    float: left;
+    padding-right: 15px;
+}
+.sns-list li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/sns_icon.png);
+    background-repeat: no-repeat;
+    /* background-size: 180px 45px; */
+    text-indent: -9999px;
+}
+.icon-youtube{ background-position: left;}
+.icon-insta{ background-position: -50px;}
+.icon-twiter{ background-position: -100px;}
+.icon-facebook{ background-position: right;}
+
+.copyright{color: #6e6e6e;}

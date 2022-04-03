@@ -1,11 +1,8 @@
 /* reset + header + footer */
 @import url(./common.css);
 
+/* 로그인 페이지 디자인 */
 /* login-form */
-.login-form{
-    
-}
-
 .login-wrap{ margin-bottom: 15px; }
 .login-wrap label{ 
     width: 100%; 
@@ -26,29 +23,43 @@
     border-radius: 3px;
     color:#ddd;
 }
-.user-typing:focus {
-    border-color: #ababab;
-}
+.user-typing:focus { border-color: #ababab;}
 
-.icon-hide{
+.input-in-btn{
     width: 32px;
     height: 32px;
-    background-image: url(../img/hidden.png);
+    overflow: hidden;    
     background-size: 28px;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    right: 30px;
     top: calc(50% - 16px);
+    text-indent: -9999px;
 }
-.icon-hide.hide-off{
-    background-image: url(../img/view.png);
+.all-delete-btn.hide-btn{
+    display: none;
 }
 
-
-.checkbox-wrap{
-margin-bottom: 30px;
+.all-delete-btn{
+    display: block;
+    background-image: url(../img//cancel_icon.png);
+    background-size: 21px;
+    right: 80px;
 }
+.all-delete-btn.id-delete{
+    right: 30px;
+}
+
+.pw-hide-btn{
+    background-image: url(../img/hidden_icon.png);
+    right: 30px;   
+}
+.pw-hide-btn.pw-view-btn{
+    background-image: url(../img/view_icon.png);
+}
+
+/* checkbox  */
+.checkbox-wrap{ margin-bottom: 30px; }
 
 .checkbox-wrap label{
     vertical-align: top;
@@ -75,54 +86,127 @@ margin-bottom: 30px;
 .checkbox-wrap label::before{
     content: '';
     display: block;
-    background-image: url(../img/check.png);
+    background-image: url(../img/check_icon.png);
     background-repeat: no-repeat;
-    background-size: 13px 13px;
+    background-size: 13px;
     background-position: center;
 }
 
-#userIdSave{
+.checkbox{
     width: 20px;
     height: 20px;
     visibility: hidden;
 }
-#userIdSave:checked + label:before{
+.checkbox:checked + label:before{
     background-color: #ff1744;
 }
-#userIdSave:checked + label{
+.checkbox:checked + label{
     color: #a3a3a3;
 }
-
-.login-btn{
+/* submit-btn */
+.submit-btn{
     width: 100%;
-    background-color: #ff1744;
     color: #fff;
     font-size: 22px;
     padding: 25px;
     font-weight: 700;
 }
 
+.login-btn{ background-color: #ff153c; }
+.login-btn:hover{background-color: #cc1030;}
+
+
 /*find-wrap*/
 .find-wrap{
     margin-top: 20px;
+    color: #a3a3a3;
+    font-size: 18px;
+    font-weight: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 45px;
 }
 
 .find-wrap li{
-    padding-right: 20px;
+    width: 165px;
+    
     position: relative;
 }
-.find-wrap li::after{
+
+.find-wrap li:first-child:after{ 
     content: '';
     display: inline-block;
     width: 1px;
     height: 15px;
     background-color: #aaa;
     position: absolute;
-    right: 7px;
+    right: 0px;
     bottom: 3px;
 }
-.find-wrap li:last-child{padding: 0;}
-.find-wrap li:last-child:after{
-    display: none;
+
+.find-wrap li a{
+    font-weight: 400;
+    font-size: inherit;
 }
 
+.find-wrap .join{
+    margin-top: 45px;
+    width: 100%;
+}
+.find-wrap .join a{padding-left: 15px;}
+
+/* 회원가입 페이지 디자인 */
+.join-wrap{
+    margin-bottom: 30px;
+}
+.join-info{
+    display: inline-block;
+    padding-top: 7px;
+    color: #6e6e6e;
+    font-size: 18px;
+}
+
+.join-btn{
+    color: #888;
+    background-color: #4e4e4e;
+}
+/* .terms checkbox */
+.terms-wrap{
+    font-size: 19px;
+    color: #6e6e6e;
+}
+
+.terms-wrap li{ padding-bottom: 15px; }
+
+.terms-wrap li label{
+    position: relative;
+    padding-left: 10px;
+}
+.terms-wrap li label::before{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -25px;
+    content: '';
+    display: block;
+    opacity: 0.4;
+    background-image: url(../img/check_icon.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+}
+.terms-wrap li .checkbox:checked + label::before{
+    background-color:transparent;
+    opacity: 1;
+    background-image: url(../img/check_on_icon.png);
+}
+.terms-wrap li label a{
+    text-decoration: underline;
+}
+
+.terms-wrap li ul{
+    padding-left: 33px;
+    padding-top: 15px;
+}
