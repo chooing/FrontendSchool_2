@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="./h001_homework.css">
+    <link rel="stylesheet" href="./goole_icon.css">
+    <title>Google Form</title>
+</head>
+<body>
+    <header class="header wrapping">
+        <h1 class="title">나와 잘맞는 회사는?</h1>
+        <p class="title-text">가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미없다.</p>
+        <div class="user-info">
+            <button class="hide-btn user-btn">
+                <span class="material-icons-outlined"> visibility_off </span>
+            </button>
+            <p>email@email.com (공유되지 않음) <a href="#">계정 전환</a></p>
+            <button class="cloud-btn user-btn">
+                <span class="material-icons-outlined">cloud_done</span>
+            </button>
+        </div>
+    </header>
+    <main class="main wrapping">
+        <section class="content-wrap">
+            <form action="" method="post">
+                <fieldset class="field-wrap">
+                    <legend class="hidden">나와 잘맞는 회사에 대한 설문 조사</legend>
+                    <div class="question-wrap">
+                        <h2>다음 문자중에 왠지 마음에 드는 것을 하나 고르세요.</h2>
+                        <div class="input-wrap">
+                            <input class=" input-radio input-choice" type="radio" name="wordChoice" id="naver" value="naver" required>
+                            <label for="naver">네</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class=" input-radio input-choice" type="radio" name="wordChoice" id="kakao" value="kakao">
+                            <label for="kakao">카</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class=" input-radio input-choice" type="radio" name="wordChoice" id="line" value="line"> 
+                            <label for="line">라</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class=" input-radio input-choice" type="radio" name="wordChoice" id="coupang" value="coupang">
+                            <label for="coupang">쿠</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class=" input-radio input-choice" type="radio" name="wordChoice" id="wecode" value="wecode">
+                            <label for="wecode">베</label>
+                        </div>
+                    </div>
+                    <div class="question-wrap">
+                        <h2>친구와 문자를 합니다. 다음 중 어떤 메신저를 이용하시겠습니까? 모두 골라주세요.</h2>
+                        <div class="input-wrap">
+                            <input class="input-checkbox input-choice" type="checkbox" name="msgKakaoTalk" id="msgKakaoTalk" value="kakaoTalk">
+                            <label for="msgKakaoTalk">카카오톡</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input-checkbox input-choice" type="checkbox" name="msgLineMsg" id="msgLineMsg" value="lineMsg"> 
+                            <label for="msgLineMsg">라인</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input-checkbox input-choice" type="checkbox" name="msgInstaDm" id="msgInstaDm" value="instaDm">
+                            <label for="msgInstaDm">인스타그램 디엠</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input-checkbox input-choice" type="checkbox" name="msgNateon" id="msgNateon" value="nateon">
+                            <label for="msgNateon">네이트온</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input-checkbox input-choice" type="checkbox" name="msgBuddy" id="msgBuddy" value="buddyBuddy">
+                            <label for="msgBuddy">버디버디</label>
+                        </div>
+                    </div>
+                    <div class="question-wrap">
+                        <h2>면접에서 자신의 포부를 한 문장으로 얘기한다면?</h2>
+                        <label class="hidden" for="userPlane">자신의 포부에 대한 내 답변</label>
+                        <input class="typing-input input-text" type="text" id="userPlane" placeholder="내 답변" required>
+                    </div>
+                    <div class="question-wrap">
+                        <h2>당신은 지금 한 기업의 최종면접을 앞두고 있습니다. 면접장에 들어아기 직전, 자기 자신에게 해주고 싶은 말은?</h2>
+                        <label class="hidden" for="userToMe">자기 자신에게 해주고 싶은 말에 대한 내 답변</label>
+                        <input class="typing-input input-textarea" type="text" name="userToMe" id="userToMe" placeholder="내 답변" required>
+                    </div>
+                    <div class="question-wrap">
+                        <h2>다음 중 기술 면접 때 듣고 싶은 질문이 아닌 것은?</h2>
+                        <label class="hidden">듣고 싶지 않은 질문 고르기</label>
+                        <select class="form-select" name="interview" id="interviewQnA" required>
+                            <option value="">선택</option>
+                            <option value="CS">CS 지식 질문</option>
+                            <option value="algorithm">알고리즘 질문</option>
+                            <option value="programLang">프로그래밍 언어 질문</option>
+                            <option value="project">프로젝트 코드 질문</option>
+                        </select>
+                    </div>
+                    <div class="question-wrap">
+                        <h2>취업을 희망하는 날짜를 선택해주세요.</h2>
+                        <span class="small-text" >날짜</span>
+                        <label class="hidden" for="jobDate">취업을 희망하는 날짜를 선택하기</label>
+                        <input class="input-date" type="date" name="jobDate" id="jobDate" required>
+                    </div>
+                    <div class="question-wrap">
+                        <h2>업무를 시작하기에 가장 적당한 시간을 고르세요.</h2>
+                        <span class="small-text">시간</span>
+                        <label class="hidden" for="startHour">1~12시를 입력하세요.</label>
+                        <input class="typing-input input-number" type="number" name="startHour" id="startHour" min="1" max="12" required>
+                        :
+                        <label class="hidden" for="startMinute">0~59분을 입력하세요.</label>
+                        <input class="typing-input input-number" type="number" name="startMinute" id="startMinute" min="0" max="59" required>
+                        <label class="hidden" for="startTime">AM 또는 PM을 입력하세요.</label>
+                            <select class="time-select" name="startTime" id="startTime" required>
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                    </div>
+                </fieldset>
+            </form>
+            <button class="submit-btn btn-basic" type="submit">제출</button>
+            <button class="reset-btn btn-basic" type="reset">양식지우기</button>
+        </section>
+    </main>
+</body>
+</html>
