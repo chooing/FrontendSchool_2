@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap');
+/* reset */
+body,h1,p, table{
+    margin: 0;
+    padding: 0; 
+}
+h1,th{
+    font-size: inherit;
+    font-weight: inherit;
+}
+i{ font-style: normal; }
+table{
+    border-collapse: collapse;
+    border-spacing : 0;
+}
+body{font-family: 'Montserrat', sans-serif;}
+/* header */
+.wrapping{
+    width: 880px;
+    margin: auto;
+}
+.header{
+    border-color: aqua;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0;
+}
+.title{
+    font-size: 80px;
+    font-weight: 900;
+}
+.title-text{
+    padding-top: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+
+}
+.title-text i{
+    margin-top: 3px;
+    font-weight: 300;
+    color: #444;
+    display: inline-block;
+    position: relative;
+}
+.title-text i::after{
+    content: '4개월 뒤에는 멋진 개발자가 되자👍';
+    width: 0;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    left: 0; top: 0;
+    overflow: hidden;
+}
+.title-text i:hover:after{
+        width: 100%;
+}
+/* calendar */
+.main{
+    margin-bottom: 50px;
+}
+.calendar{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+    vertical-align: top;
+}
+.calendar:nth-child(even){
+    margin-right: 0px;
+}
+.calendar caption{
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.calendar tr td:first-child, 
+.calendar tr th:first-child, 
+.holiday{ 
+    color:crimson;
+}
+
+.calendar tr td:last-child, 
+.calendar tr th:last-child{ 
+    color:royalblue;
+}
+
+.calendar tr td.before-month{
+    color: #aaa;
+}
+.calendar tr td.birthday{
+    background-color:rgb(214, 243, 255);
+}
+
+.calendar tr th{
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.calendar tr td{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #eee;
+    vertical-align: top;
+}
+.calendar tr td strong{
+    padding-top: 5px;
+    display: block;
+}
+
+.calendar tr td:hover{
+    background-color: #eee;
+}
