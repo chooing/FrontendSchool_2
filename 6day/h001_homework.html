@@ -76,17 +76,17 @@
                     </div>
                     <div class="question-wrap">
                         <h2>면접에서 자신의 포부를 한 문장으로 얘기한다면?</h2>
-                        <label class="hidden" for="userPlane">자신의 포부에 대한 내 답변</label>
+                        <!-- <label class="hidden" for="userPlane">자신의 포부에 대한 내 답변</label> -->
                         <input class="typing-input input-text" type="text" id="userPlane" placeholder="내 답변" required>
                     </div>
                     <div class="question-wrap">
                         <h2>당신은 지금 한 기업의 최종면접을 앞두고 있습니다. 면접장에 들어아기 직전, 자기 자신에게 해주고 싶은 말은?</h2>
-                        <label class="hidden" for="userToMe">자기 자신에게 해주고 싶은 말에 대한 내 답변</label>
+                        <!-- <label class="hidden" for="userToMe">자기 자신에게 해주고 싶은 말에 대한 내 답변</label> -->
                         <textarea class="typing-input input-textarea" name="userToMe" id="userToMe" placeholder="내 답변" required></textarea>
                     </div>
                     <div class="question-wrap">
                         <h2>다음 중 기술 면접 때 듣고 싶은 질문이 아닌 것은?</h2>
-                        <label class="hidden">듣고 싶지 않은 질문 고르기</label>
+                        <!-- <label class="hidden">듣고 싶지 않은 질문 고르기</label> -->
                         <select class="form-select" name="interview" id="interviewQnA" required>
                             <option value="">선택</option>
                             <option value="CS">CS 지식 질문</option>
@@ -97,14 +97,14 @@
                     </div>
                     <div class="question-wrap">
                         <h2>취업을 희망하는 날짜를 선택해주세요.</h2>
-                        <span class="small-text" >날짜</span>
-                        <label class="hidden" for="jobDate">취업을 희망하는 날짜를 선택하기</label>
+                        <label class="small-text" for="jobDate">날짜</label>
                         <input class="input-date" type="date" name="jobDate" id="jobDate" required>
                     </div>
                     <div class="question-wrap">
                         <h2>업무를 시작하기에 가장 적당한 시간을 고르세요.</h2>
-                        <span class="small-text">시간</span>
-                        <label class="hidden" for="startHour">1~12시를 입력하세요.</label>
+                        <label class="small-text" for="startTime">시간</label>
+                        <input type="time" name="startTime" id="startTime">
+                        <!-- <label class="hidden" for="startHour">1~12시를 입력하세요.</label>
                         <input class="typing-input input-number" type="number" name="startHour" id="startHour" min="1" max="12" required>
                         :
                         <label class="hidden" for="startMinute">0~59분을 입력하세요.</label>
@@ -113,7 +113,7 @@
                             <select class="time-select" name="startTime" id="startTime" required>
                                 <option value="AM">AM</option>
                                 <option value="PM">PM</option>
-                            </select>
+                            </select> -->
                     </div>
                 </fieldset>
                 <button class="submit-btn btn-basic" type="submit">제출</button>
