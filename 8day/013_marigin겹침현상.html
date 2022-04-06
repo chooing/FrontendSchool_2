@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 겹침 현상 (margin collapsing)</title>
+    <style>
+        /* div{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+        }
+
+        .first{
+            margin-bottom:30px; 
+        }
+
+        .second{
+            margin-top:60px;
+        } */
+        /* 마진 값이 높은 쪽의 마진만 적용됩니다. */
+        .parent{
+            background-color:yellow;
+            margin-top: 100px;
+            /* overflow: hidden; 마진겹침 해결1 */
+            /* display: inline-block; 마진겹침 해결2 */
+            /* border: 1px solid #000; 마진겹침 해결3-하지만 잘 사용안함 */
+        }
+        .child{
+            margin-top: 200px;
+            width:100px;
+            height:100px;
+            background-color:red;
+        }
+
+/* 부모의 높이를 따로 지정하지 않으면 자식의 높이만큼 부모의 높이가 지정됩니다.
+하지만 위와 같은 경우 자식의 마진 탑, 바텀 값이 부모의 높이에 영향을 미치지 않게 됩니다. */
+    </style>
+</head>
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>
