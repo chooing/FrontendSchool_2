@@ -1,0 +1,266 @@
+/* animaion */
+@keyframes 눈동자 {
+    0% { left: calc(50% - 58px); }
+    25%{ left: 0; }
+    50%{ left: calc(50% - 58px); }
+    75%{ left: 75px; }
+    100% { left: calc(50% - 58px); }
+}
+/* reset */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* setting */
+:root {
+    --main: #C2895C;
+    --sub: #EBD3A5;
+    --point: #512A10;
+    --bgcolor:#FFD93D;
+}
+/* design */
+body{ background-color: var(--bgcolor); }
+*::before, *::after{
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.dear{
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
+    width: 670px; 
+    margin: 0 auto; 
+    margin-top: 190px;
+    position: relative;
+}
+/* 화관 */
+.dear .crown-wrap{
+    position: absolute;
+    z-index: 30;
+    width: 540px;
+    height: 100px;
+    top: 65px;
+    left: calc(50% - 270px);
+}
+
+.crown-wrap .flower{position: absolute;}
+.crown-wrap .flower.one{
+    left: 25px;
+    top: -5px;
+    transform: rotate(8deg);
+}
+.crown-wrap .flower.two{
+    left: 110px;
+    top: 15px;
+    transform: rotate(8deg);
+
+}
+.crown-wrap .flower.three{
+    left: 200px;
+    top: 30px;
+    transform: rotate(8deg);
+}
+.crown-wrap .flower.four{
+    right: 250px;
+    top: 15px;
+    transform: rotate(8deg);
+}
+.crown-wrap .flower.five{
+    right: 168px;
+    top: 5px;
+}
+
+.crown-wrap .flower::after{
+    width: 40px;
+    height: 40px;
+    background-color: var(--bgcolor);
+    border-radius: 50%;
+    left: 60px;
+    top: -23px;
+}
+.crown-wrap .flower .petal{
+    width: 150px;
+    height: 1px;
+    position: absolute;
+}
+.crown-wrap .flower .petal::after{
+    box-shadow: 0 0 5px #512a101a;
+    width: 60px;
+    height: 50px;
+    background-color: #fff;
+    margin-top: -30px;
+    border-radius: 0% 100% 0% 100%;
+    transform: rotate(-35deg);
+}
+.crown-wrap .flower .petal.one{ transform: rotate(36deg);}
+.crown-wrap .flower .petal.two{ transform: rotate(72deg);}
+.crown-wrap .flower .petal.three{ transform: rotate(108deg);}
+.crown-wrap .flower .petal.four{ transform: rotate(144deg);}
+.crown-wrap .flower .petal.five{ transform: rotate(180deg);}
+.crown-wrap .flower .petal.six{ transform: rotate(-144deg);}
+.crown-wrap .flower .petal.seven{ transform: rotate(-108deg);}
+.crown-wrap .flower .petal.eight{ transform: rotate(-72deg);}
+.crown-wrap .flower .petal.nine{ transform: rotate(-36deg);}
+.crown-wrap .flower .petal.ten{ transform: rotate(0deg);}
+
+/* 뿔 */
+.dear .horn{
+    width: 40px;
+    height: 240px;
+    background-color: var(--point);
+    border-radius: 20px;
+    z-index: 20;
+    position: absolute;
+    top: -23%;
+}
+
+.dear .horn.left{left: 30%;}
+.dear .horn.right{
+    right: 30%; 
+    transform: rotateY(180deg);
+}
+
+.dear .horn::before, .dear .horn::after{
+    width: 40px;
+    background-color: var(--point);
+    border-radius: 20px;
+}
+
+.dear .horn::before{ 
+    height: 120px;
+    top: 20px;
+    left: -30px;
+    transform: rotate(-45deg);
+}
+.dear .horn::after{
+    height: 100px; 
+    top: 60px;
+    right: -30px;
+    transform: rotate(45deg);
+}
+
+
+/* 귀 */
+.dear .ear{
+    width: 155px;
+    height: 180px;
+    background-color: var(--sub);
+    border: 7px solid var(--main);
+    position: absolute;
+    top: 30px;
+    z-index: 10;
+}
+.dear .ear::after{
+    background-color: var(--main);
+    width: 150px;
+    height: 180px;
+    top: 12px;
+}
+
+.dear .ear.left{
+    border-radius: 126% 11% 23% 99% / 110% 84% 33% 25%;
+    transform: rotate(-65deg);
+    left: -70px;
+}
+.dear .ear.left::after{
+    left: 31px;
+    transform: rotate(-17deg);
+    border-radius: 100% 0% 55% 0%;
+}
+
+.dear .ear.right{
+    border-radius: 11% 126% 99% 23% / 84% 110% 25% 33%;
+    transform: rotate(65deg);
+    right: -70px;
+}
+
+.dear .ear.right::after{
+    right: 31px;
+    transform: rotate(17deg);
+    border-radius: 0% 100% 0% 55%;
+}
+
+/* 얼굴 */
+.dear .face{
+    width: 660px;
+    height: 700px;
+    background-color: var(--main);
+    border-radius: 50% 50% 50% 50% / 42% 42% 58% 58% ;
+    position: relative;
+}
+.dear .face::after{
+    width: 400px;
+    height: 135px;
+    background-color: var(--main);
+    border-radius: 150%;
+    top: 70px; 
+    left: calc(50% - 200px);
+}
+
+/* 눈 */
+.face .eye{
+    width: 190px;
+    height: 245px;
+    background-color: #fff;
+    border-radius: 150%;
+    position: absolute;
+    top: 155px;
+    overflow: hidden;
+}
+.face .eye::before{
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background-color: var(--point);
+    top: 80px;
+    left: calc(50% - 58px);
+    animation: 눈동자 3.5s infinite ease-in-out;
+}
+
+.face .eye.left{left: 128px;}
+.face .eye.right{right: 128px;}
+
+/* 코 */
+.face .nose{
+    width: 110px;
+    height: 80px;
+    background-color: var(--point);
+    border-radius: 50% 50% 50% 50% / 23% 23% 77% 77% ;
+    position: absolute;
+    z-index: 10;
+    bottom: 195px;
+    left: calc(50% - 55px);
+}
+
+/* 입 */
+.face .mouth-wrap{
+    width: 315px;
+    height: 190px;
+    background-color: var(--sub);
+    border-radius: 150%;
+    position: absolute;
+    bottom: 55px;
+    left: calc(50% - 157.5px);
+    overflow: hidden;
+}
+.face .mouth-wrap::after{
+    width: 300px;
+    height: 48px;
+    left: 0;
+    top: 0;
+    background-color: var(--sub);
+}
+.face .mouth-wrap .mouth{
+    width: 75px;
+    height: 55px;
+    border-radius: 110%;
+    border: 15px solid var(--point);
+    position: absolute;
+    top: 5px;
+}
+.face .mouth-wrap .mouth.left{ left: 60px; }
+.face .mouth-wrap .mouth.right{ right: 60px; }
+
+
