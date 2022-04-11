@@ -1,0 +1,41 @@
+/* reset */
+body, h1, h2, p, ul, li, a, button, input{
+    margin: 0; 
+    padding: 0;
+}
+ul{list-style: none;}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+}
+h1, h2, p, a, li, input{
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: 1;
+    color: inherit;
+}
+img{
+    vertical-align: top; 
+    width: 100%;
+}
+button{cursor: pointer;}
+input{border: none;}
+
+/* setting */
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

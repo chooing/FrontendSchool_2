@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인&회원가입</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        /* setting */
+        body{
+            font-family: 'SpoqaHanSansNeo-Regular';
+            background-color: #F2F2F2;
+        }
+
+        /* design */
+        .login_wrap{
+            width: 520px;
+            height: 720px;
+            border: 1px solid #C4C4C4;
+            background-color: #FFF;
+            box-sizing: border-box;
+            border-radius: 5px;
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+        .title{
+            border-bottom: 1px solid #C4C4C4;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px 0 18px;
+        }
+        .title h1{
+            display: inline-block;
+            margin-left: 186px;
+
+        }
+        .title .close{
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-image: url(./close.png);
+            background-size: cover;
+            background-position: center;
+            margin-left: 128px;
+            margin-right: 24px;
+        }
+
+        .form-wrap{
+            padding: 26px 24px 25px;
+        }
+        .form-wrap .sub_text{
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .form-wrap .input-typing{
+            width: 100%;
+            height: 50px;
+            padding: 15px 16px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            border: 1px solid #C4C4C4;
+            margin-bottom: 10px;
+        }
+        .form-wrap .input-checkbox{
+            margin-top: 17px;
+        }
+        .form-wrap .submit-btn{
+            width: 100%;
+            height: 50px;
+            background: #2F80ED;
+            border-radius: 5px;
+            color: #fff;
+            font-family: 'SpoqaHanSansNeo-Bold';
+            margin-top: 21px;
+            font-size: 18px;    
+        }
+
+        .find-wrap{
+            margin: 20px 0 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .find-wrap li{
+            padding: 0 14px; 
+            position: relative;
+            font-size: 14px;
+        }
+        .find-wrap li::after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 14px;
+            background-color: #767676;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .find-wrap li:last-child:after{
+            display: none;
+        }
+        
+        .or-line{
+            text-align: center;
+            position: relative;
+            font-size: 14px;
+        }
+        .or-line::before, .or-line::after{
+            content: '';
+            display: block;
+            height: 1px;
+            width: 210px;
+            background-color: #C4C4C4;
+            position: absolute;
+        }
+
+        .or-line::before{
+            left: 0; top: 50%;
+        }
+        .or-line::after{
+            right: 0; top: 50%;
+        }
+
+        .sns-login{
+            font-size: 16px;
+            color: #767676;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .sns-login li{
+            width: 472px;
+            height: 50px;
+            padding: 15px 0;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-image: url(./img/css_sprites.png);
+            background-repeat: no-repeat;
+        }
+
+        .sns-login li:nth-child(1){border-color: #767676;}
+        .sns-login li:nth-child(2){border-color: #2D9CDB;}
+        .sns-login li:nth-child(3){border-color: #00BF18;}
+        .sns-login li:nth-child(4){border-color: #F2C94C;}
+
+
+
+    </style>
+</head>
+<body>
+    <article class="login_wrap">
+        <header class="title">
+            <h1>로그인 또는 회원가입</h1>
+            <button class="close"></button>
+        </header>
+        <div class="form-wrap">
+            <p class="sub_text">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+            <form id="loginForm" action="./join.html" method="post">
+                <input class="input-typing" type="text" placeholder="아이디">
+                <input class="input-typing" type="password" placeholder="비밀번호">
+                <input class="input-checkbox" type="checkbox" id="idSaveCheck">
+                <label for="idSaveCheck">로그인 상태 유지</label>
+                <button class="submit-btn">로그인</button>
+            </form>
+            <ul class="find-wrap">
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">아이디/비밀번호 찾기</a></li>
+            </ul>
+            <p class="or-line">또는</p>
+            <ul class="sns-login">
+                <li><a href="#">구글 계정으로 로그인</a></li>
+                <li><a href="#">페이스북 계정으로 로그인</a></li>
+                <li><a href="#">네이버 계정으로 로그인</a></li>
+                <li><a href="#">카카오톡 계정으로 로그인</a></li>
+            </ul>
+        </div>
+    </article>
+</body>
+</html>
