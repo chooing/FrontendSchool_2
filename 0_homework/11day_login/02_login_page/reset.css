@@ -1,5 +1,5 @@
 /* reset */
-body, h1, h2, p, ul, li, a, button, input{
+body, h1, h2, p, ul, li, a, button, input,label{
     margin: 0; 
     padding: 0;
 }
@@ -13,7 +13,7 @@ button{
     background-color: transparent;
     border: none;
 }
-h1, h2, p, a, li, input{
+h1, h2, p, a, li, input,label{
     font-weight: inherit;
     font-size: inherit;
     line-height: 1;

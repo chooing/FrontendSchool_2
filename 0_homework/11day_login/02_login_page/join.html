@@ -67,7 +67,29 @@
         }
         .form-wrap .input-checkbox{
             margin-top: 17px;
+            width: 22px;
+            height: 22px;
+            vertical-align: bottom;
+            margin-right: 8px;
+            opacity: 0;
         }
+        .form-wrap label{
+            position: relative;
+        }
+        .form-wrap label::after{
+            content: '';
+            display: block;
+            width: 22px; height: 22px;
+            position: absolute;
+            left: -33px;
+            top: 1px;
+            background-image: url(./img/icon_check_empty.png);
+        }
+
+        .form-wrap .input-checkbox:checked+label::after{
+            background-image: url(./img/icon_check.png);
+        }
+
         .form-wrap .submit-btn{
             width: 100%;
             height: 50px;
@@ -138,14 +160,32 @@
             box-sizing: border-box;
             margin-bottom: 10px;
             border-radius: 5px;
-            background-image: url(./img/css_sprites.png);
+            background-position: 12px center;
             background-repeat: no-repeat;
         }
 
-        .sns-login li:nth-child(1){border-color: #767676;}
-        .sns-login li:nth-child(2){border-color: #2D9CDB;}
-        .sns-login li:nth-child(3){border-color: #00BF18;}
-        .sns-login li:nth-child(4){border-color: #F2C94C;}
+        .sns-login li:nth-child(1){
+            background-image: url(./img/Google__G__Logo\ 1.png);
+            border-color: #767676;
+        }
+        .sns-login li:nth-child(2){
+            background-image: url(./img/facebook.png);
+            border-color: #2D9CDB;
+        }
+        .sns-login li:nth-child(3){
+            background-image: url(./img/naver-logo.png);
+            border-color: #00BF18;
+        }
+        .sns-login li:nth-child(4){
+            background-image: url(./img/message-circle.png);
+            border-color: #F2C94C;
+        }
+
+        .sns-login li a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
 
 
 
@@ -162,9 +202,11 @@
             <form id="loginForm" action="./join.html" method="post">
                 <input class="input-typing" type="text" placeholder="아이디">
                 <input class="input-typing" type="password" placeholder="비밀번호">
-                <input class="input-checkbox" type="checkbox" id="idSaveCheck">
-                <label for="idSaveCheck">로그인 상태 유지</label>
-                <button class="submit-btn">로그인</button>
+                <div class="check-wrap">
+                    <input class="input-checkbox" type="checkbox" id="idSaveCheck">
+                    <label for="idSaveCheck">로그인 상태 유지</label>
+                </div>
+                    <button class="submit-btn">로그인</button>
             </form>
             <ul class="find-wrap">
                 <li><a href="#">회원가입</a></li>
