@@ -16,40 +16,30 @@
         /* design */
         .login_wrap{
             width: 520px;
-            height: 720px;
             border: 1px solid #C4C4C4;
             background-color: #FFF;
-            box-sizing: border-box;
             border-radius: 5px;
+            transform: translate(-50%, -50%);
             position: absolute;
-            left: 0; right: 0; top: 0; bottom: 0;
-            margin: auto;
+            left: 50%; top: 50%;
             overflow: hidden;
         }
         .title{
             border-bottom: 1px solid #C4C4C4;
             font-size: 16px;
             text-align: center;
-            padding: 20px 0 18px;
+            padding: 22px 0 20px;
+            overflow: hidden;
         }
-        .title h1{
-            display: inline-block;
-            margin-left: 186px;
-
-        }
-        .title .close{
+        .close-btn{
+            float: right;
             width: 16px;
-            height: 16px;
-            display: inline-block;
-            background-image: url(./close.png);
-            background-size: cover;
-            background-position: center;
-            margin-left: 128px;
+            margin-top: -36px;
             margin-right: 24px;
         }
 
         .form-wrap{
-            padding: 26px 24px 25px;
+            padding: 26px 24px 24px;
         }
         .form-wrap .sub_text{
             font-size: 16px;
@@ -63,26 +53,33 @@
             border-radius: 5px;
             box-sizing: border-box;
             border: 1px solid #C4C4C4;
+        }
+        .form-wrap input:first-child{
             margin-bottom: 10px;
         }
-        .form-wrap .input-checkbox{
+
+        .form-wrap .check-wrap{
             margin-top: 17px;
+            overflow: hidden;
+        }
+        .form-wrap .input-checkbox{
             width: 22px;
             height: 22px;
             vertical-align: bottom;
             margin-right: 8px;
             opacity: 0;
+            float: left;
         }
         .form-wrap label{
             position: relative;
+            float: left;
         }
         .form-wrap label::after{
             content: '';
             display: block;
             width: 22px; height: 22px;
-            position: absolute;
-            left: -33px;
-            top: 1px;
+            float: left;
+            margin-left: -30px;
             background-image: url(./img/icon_check_empty.png);
         }
 
@@ -92,7 +89,7 @@
 
         .form-wrap .submit-btn{
             width: 100%;
-            height: 50px;
+            padding: 12px 0;
             background: #2F80ED;
             border-radius: 5px;
             color: #fff;
@@ -102,26 +99,27 @@
         }
 
         .find-wrap{
-            margin: 20px 0 30px;
-            display: flex;
-            justify-content: center;
+            margin: 18px 0 28px;
+            text-align: center;
         }
-        .find-wrap li{
-            padding: 0 14px; 
+        .find-wrap a{
+            display: inline-block;
+            margin: 0 14px; 
             position: relative;
             font-size: 14px;
         }
-        .find-wrap li::after{
+        .find-wrap a::after{
+            margin-left: 14px;
             content: '';
             display: block;
             width: 1px;
             height: 14px;
             background-color: #767676;
             position: absolute;
-            right: 0;
+            right: -14px;
             top: 0;
         }
-        .find-wrap li:last-child:after{
+        .find-wrap a:last-child:after{
             display: none;
         }
         
@@ -151,52 +149,42 @@
             color: #767676;
             text-align: center;
             margin-top: 20px;
-        }
-        .sns-login li{
             width: 472px;
-            height: 50px;
-            padding: 15px 0;
-            border: 1px solid #000;
-            box-sizing: border-box;
+        }
+        .sns-login a{
+            display: block;
+            padding: 16px 0;
+            border: 1px solid ;
             margin-bottom: 10px;
             border-radius: 5px;
             background-position: 12px center;
             background-repeat: no-repeat;
         }
 
-        .sns-login li:nth-child(1){
+        .sns-login a:nth-child(1){
             background-image: url(./img/Google__G__Logo\ 1.png);
             border-color: #767676;
         }
-        .sns-login li:nth-child(2){
+        .sns-login a:nth-child(2){
             background-image: url(./img/facebook.png);
             border-color: #2D9CDB;
         }
-        .sns-login li:nth-child(3){
+        .sns-login a:nth-child(3){
             background-image: url(./img/naver-logo.png);
             border-color: #00BF18;
         }
-        .sns-login li:nth-child(4){
+        .sns-login a:nth-child(4){
             background-image: url(./img/message-circle.png);
             border-color: #F2C94C;
+            margin-bottom: 0;
         }
-
-        .sns-login li a{
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-
-
 
     </style>
 </head>
 <body>
     <article class="login_wrap">
-        <header class="title">
-            <h1>로그인 또는 회원가입</h1>
-            <button class="close"></button>
-        </header>
+        <h2 class="title">로그인 또는 회원가입</h2>
+        <button class="close-btn"><img src="./img/close.png" alt=""></button>
         <div class="form-wrap">
             <p class="sub_text">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
             <form id="loginForm" action="./join.html" method="post">
@@ -206,19 +194,19 @@
                     <input class="input-checkbox" type="checkbox" id="idSaveCheck">
                     <label for="idSaveCheck">로그인 상태 유지</label>
                 </div>
-                    <button class="submit-btn">로그인</button>
+                <button class="submit-btn">로그인</button>
             </form>
-            <ul class="find-wrap">
-                <li><a href="#">회원가입</a></li>
-                <li><a href="#">아이디/비밀번호 찾기</a></li>
-            </ul>
+            <div class="find-wrap">
+                <a href="#none">회원가입</a>
+                <a href="#none">아이디/비밀번호 찾기</a>
+            </div>
             <p class="or-line">또는</p>
-            <ul class="sns-login">
-                <li><a href="#">구글 계정으로 로그인</a></li>
-                <li><a href="#">페이스북 계정으로 로그인</a></li>
-                <li><a href="#">네이버 계정으로 로그인</a></li>
-                <li><a href="#">카카오톡 계정으로 로그인</a></li>
-            </ul>
+            <div class="sns-login">
+                <a href="#none">구글 계정으로 로그인</a>
+                <a href="#none">페이스북 계정으로 로그인</a>
+                <a href="#none">네이버 계정으로 로그인</a>
+                <a href="#none">카카오톡 계정으로 로그인</a>
+            </div>
         </div>
     </article>
 </body>

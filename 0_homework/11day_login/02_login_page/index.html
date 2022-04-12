@@ -16,12 +16,13 @@
         /* design */
         .main{
             width: 500px;
+            transform: translate(-50%, -50%);
             position: absolute;
-            top: 0; bottom: 0; left: 0; right: 0;
-            margin: auto;
+            top: 50%;
+            left: 50%;
         }
         .login{
-            padding: 30px;
+            padding: 29px;
             border: 1px solid #C4C4C4;
             background-color: #FFF;
             border-radius: 5px;
@@ -35,6 +36,7 @@
         }
         .login .sub_text{
             font-size: 16px;
+            padding: 2px  0;
             margin-bottom: 32px;
         }
         .login .login_btn{
@@ -50,11 +52,11 @@
 </head>
 <body>
     <main class="main">
-        <section class="login">
+        <article class="login">
             <h1 class="logo"><a href="#"><img src="./img/weniv-logo.png" alt="위니브 로고"></a></h1>
             <p class="sub_text">위니브를 더 즐겁고 편리하게 이용하세요.</p>
             <a href="./join.html" class="login_btn" type="button">로그인</a>
-        </section>
+        </article>
     </main>
 </body>
 </html>
