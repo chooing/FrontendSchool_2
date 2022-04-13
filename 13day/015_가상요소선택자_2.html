@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        p{  
+            position: relative;
+            border: 5px solid salmon;
+        }  
+
+        span{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color:cornflowerblue;
+        }
+
+        p::before{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: darkslategray;
+        }
+        p::after{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color:indigo;
+        }
+    </style>
+</head>
+<body>
+    <p>hello <span>world</span></p>
+</body>
+</html>
