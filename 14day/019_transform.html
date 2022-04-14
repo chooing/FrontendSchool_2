@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        @keyframes 두근두근 {
+            0%{transform :scale(1) rotate(60deg);}
+            25%{transform :scale(2) translateX(20px);}
+            50%{transform :scale(1) rotate(-60deg);}
+            75%{transform :scale(2) translateX(20px);}
+            100%{transform :scale(1) rotate(60deg);}
+        }
+        div {
+            margin: 100px;
+            background-color: crimson;
+            width: 100px;
+            height: 100px;
+            transition: all .3s;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        div:hover {
+            animation: 두근두근 1s alternate infinite;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
