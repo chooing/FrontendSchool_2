@@ -102,18 +102,13 @@
 
         //천일은 언제인가?
         let thousand = start.getTime()+999*(1000*60*60*24);
-        let dayMs3 = valentine.getTime()-now.getTime();
-        let day3 = Math.floor(dayMs3/(1000*60*60*24)+1);
-        $("#thousand").text(day3+"일남음"); 
-        
+        let thousandDate =new Date(thousand);
+        $("#thousand-date").text(`${thousandDate.getFullYear()}.${thousandDate.getMonth()+1}.${thousandDate.getDate()}`); 
 
         //천일까지 남은 날짜는?
-        // let thousand = start.getTime()+999*(1000*60*60*24);
-        let dayMs4 = valentine.getTime()-now.getTime();
+        let dayMs4 = thousand-now.getTime();
         let day4 = Math.floor(dayMs4/(1000*60*60*24)+1);
         $("#thousand").text(day4+"일남음"); 
-
-
     </script>
 </body>
 </html>
