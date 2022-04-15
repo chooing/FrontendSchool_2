@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>로또 추첨기</title>
+</head>
+<body>
+    <h1>로또 번호 추첨기 1</h1>
+    <script>
+        let num = Math.random() * 45 + 1;
+        let ball = parseInt(num); 
+        // Math.random(); => 0이상 1미만의 실수(float)형 자료가 나온다.
+        // parseInt 소수점은 버리고 정수(int)로 변환시켜 준다.
+
+        const lotto = [];
+        lotto.push(parseInt(Math.random() * 45 + 1));
+        lotto.push(parseInt(Math.random() * 45 + 1));
+        lotto.push(parseInt(Math.random() * 45 + 1));
+        lotto.push(parseInt(Math.random() * 45 + 1));
+        lotto.push(parseInt(Math.random() * 45 + 1));
+        lotto.push(parseInt(Math.random() * 45 + 1));
+        document.write(lotto);
+
+    </script>    
+</body>
+</html>
