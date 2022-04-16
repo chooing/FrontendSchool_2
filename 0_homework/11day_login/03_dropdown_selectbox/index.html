@@ -6,37 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>드롭박스</title>
     <style>
-        .select-box{
+        body,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .wrap{
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .drop-down{
             width: 200px;
             border-radius: 10px;
             padding: 12px 14px;
             border: 1px solid #C4C4C4;
+            background-color: #fff;
+            text-align-last: left;
+            background:url('./img/icon-Triangle-up.png') no-repeat 95% 50%;
+            margin-bottom: 9px;
         }
-        .select-box option{
-            padding: 12px 18px;
+        .drop-down.click{
+            border-color: #9B51E0;
+            outline: 3px solid #F8E4FF; 
+            background-image: url('./img/icon-Triangle-down.png');
         }
-        .select-box {
-            background:url('./img/icon-Triangle-down.png') no-repeat 95% 50%;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance : none;
+
+        .drop-down.click + .option{
+            display: block;
         }
-        select::-ms-expand {
+
+        .option{
+            width: 200px;
             display: none;
+            border: 1px solid #C4C4C4;
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 1s;
         }
+        .option li{
+            margin: 5px 8px;
+            padding: 7px 10px;
+        }
+        .option li:hover{
+            background: #F8E4FF;
+            border-radius: 8px;
+        }
+        
+
 
 
     </style>
     
 </head>
 <body>
-    <select class="select-box" name="" id="">
-        <option value="">최애 프로그래밍 언어</option>
-        <option value="python">Python</option>
-        <option value="java">Java</option>
-        <option value="javaScript">javaScript</option>
-        <option value="C#">C#</option>
-        <option value="C++">C/C++</option>
-    </select>
+    <div class="wrap">
+        <select class="select-box" name="program" id="selectBox" required>
+            <option value="">최애 프로그래밍 언어</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="javaScript">javaScript</option>
+            <option value="C#">C#</option>
+            <option value="C/C++">C/C++</option>
+        </select>
+        
+        <button type="button" id="dropDownBtn" class="drop-down">최애 프로그래밍 언어</button>
+        <ul id="optionBox" class="option">
+            <li id="python">Python</li>
+            <li id="java">Java</li>
+            <li id="javaScript">javaScript</li>
+            <li id="C#">C#</li>
+            <li id="C/C++">C/C++</li>
+        </ul>
+    </div>
+    <script>
+        const selectBox = document.getElementById("selectBox");
+        const optionBoxList = document.querySelectorAll("#optionBox li");
+        const dropDownBtn = document.getElementById("dropDownBtn");
+
+        dropDownBtn.addEventListener("click",(e)=>{
+            (e.target.classList.contains("click"))?
+                e.target.classList.remove("click"):
+                e.target.classList.add("click");
+        });
+
+        for (const item of optionBoxList) {
+            item.addEventListener("click",(e)=>{
+                selectBox.value=e.target.id;
+                dropDownBtn.classList.remove("click");
+                dropDownBtn.innerText=e.target.innerText;
+            });
+        }
+    </script>
 </body>
 </html>
