@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* 카카오 PC용*/
+        .ir_pm{
+            display:block;
+            overflow:hidden;
+            Font-size:1px;
+            line-height:0;
+            text-indent:-9999px;
+            /*text-indent:-9999px; 해당 사이즈만크 공간을 차지해서 권장하지 않는 곳도 있다. */
+        }
+
+        /* 카카오 Mobile용*/
+        .ir_pm{
+            display:block;
+            overflow:hidden;
+            font-size:1px;
+            line-height:0;
+            color:transparent; 
+        /* transparent 키워드는 IE9부터 사용 가능하기 때문에 PC에서는 빠져있습니다.
+        https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#transparent */
+        }
+
+        /* 마크업 구조상 필요한 경우 -헤딩태그 숨길 때*/
+        .screen_out {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* 중요한 이미지 대체텍스트로 이미지 off 시 에도 대체 텍스트를 보여주고자 할때 */
+        .ir_wa{
+            display:block;
+            overflow:hidden;
+            position:relative;
+            z-index:-1;
+            width:100%;
+            height:100%
+        }
+
+        /* 네이버 */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            /* IE 구버전에서 인식을 못하는 경우가 있기 때문에 margin: -1px; 을 사용 */
+            overflow: hidden;
+        }
+
+        /* 쿠팡 */
+        .product-search a.search {
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            width: 50px;
+            height: 39px;
+            background-position: -112px -71px;
+            text-indent: -9em;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

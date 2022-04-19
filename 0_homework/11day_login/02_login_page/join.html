@@ -151,34 +151,29 @@
             margin-top: 20px;
             width: 472px;
         }
-        .sns-login a{
+        .sns-login .btn-sns{
             display: block;
             padding: 16px 0;
             border: 1px solid ;
             margin-bottom: 10px;
             border-radius: 5px;
-            background-position: 12px center;
             background-repeat: no-repeat;
+            background-image: url('./img/css_sprites_x4.png');
+            background-size: 38px;
         }
 
-        .sns-login a:nth-child(1){
-            background-image: url(./img/Google__G__Logo\ 1.png);
-            border-color: #767676;
+        .sns-login .btn-sns.icon_google{
+            background-position: 0px 5px ;
         }
-        .sns-login a:nth-child(2){
-            background-image: url(./img/facebook.png);
-            border-color: #2D9CDB;
+        .sns-login .btn-sns.icon_facebook{
+            background-position: 0px -33px ;
         }
-        .sns-login a:nth-child(3){
-            background-image: url(./img/naver-logo.png);
-            border-color: #00BF18;
+        .sns-login .btn-sns.icon_naver{
+            background-position: 0px -71px ;
         }
-        .sns-login a:nth-child(4){
-            background-image: url(./img/message-circle.png);
-            border-color: #F2C94C;
-            margin-bottom: 0;
+        .sns-login .btn-sns.icon_kakao{
+            background-position: 0px -109px ;
         }
-
     </style>
 </head>
 <body>
@@ -202,10 +197,10 @@
             </div>
             <p class="or-line">또는</p>
             <div class="sns-login">
-                <a href="#none">구글 계정으로 로그인</a>
-                <a href="#none">페이스북 계정으로 로그인</a>
-                <a href="#none">네이버 계정으로 로그인</a>
-                <a href="#none">카카오톡 계정으로 로그인</a>
+                <a class="btn-sns icon_google" href="#none">구글 계정으로 로그인</a>
+                <a class="btn-sns icon_facebook" href="#none">페이스북 계정으로 로그인</a>
+                <a class="btn-sns icon_naver" href="#none">네이버 계정으로 로그인</a>
+                <a class="btn-sns icon_kakao" href="#none">카카오톡 계정으로 로그인</a>
             </div>
         </div>
     </article>

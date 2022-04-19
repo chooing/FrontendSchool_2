@@ -144,7 +144,7 @@ body{background-color: #ede8f6;}
     width: 18px; height: 18px;
     border-radius: 3px;    
     left: 1px; top: 1px;
-    background-image: url(./images/check_icon.png);
+    background-image: url(./check_icon.png);
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: center;
