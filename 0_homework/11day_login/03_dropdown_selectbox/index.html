@@ -50,14 +50,18 @@
             font-size: 14px;
             transition: all 1s;
         }
-        .option li{
-            margin: 5px 8px;
+        .option li {margin: 5px 8px;}
+        .option li button{
+            border: none;
+            font-size: inherit;
+            background-color: transparent;
             padding: 7px 10px;
         }
         .option li:hover{
             background: #F8E4FF;
             border-radius: 8px;
         }
+        
         
 
 
@@ -78,18 +82,18 @@
         
         <button type="button" id="dropDownBtn" class="drop-down">최애 프로그래밍 언어</button>
         <ul id="optionBox" class="option">
-            <li id="python">Python</li>
-            <li id="java">Java</li>
-            <li id="javaScript">javaScript</li>
-            <li id="C#">C#</li>
-            <li id="C/C++">C/C++</li>
+            <li><button id="python" type="button">Python</button></li>
+            <li><button id="java" type="button">Java</button></li>
+            <li><button id="javaScript" type="button">javaScript</button></li>
+            <li><button id="C#" type="button">C#</button></li>
+            <li><button id="C/C++" type="button">C/C++</button></li>
         </ul>
     </div>
     <script>
         const selectBox = document.getElementById("selectBox");
-        const optionBoxList = document.querySelectorAll("#optionBox li");
+        const optionBoxList = document.querySelectorAll("#optionBox li button");
         const dropDownBtn = document.getElementById("dropDownBtn");
-
+        console.log(optionBoxList);
         dropDownBtn.addEventListener("click",(e)=>{
             (e.target.classList.contains("click"))?
                 e.target.classList.remove("click"):
