@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        body{
+        }
+
+        .container{
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: mediumturquoise;
+        }
+        .item{
+            width: 33.3333%;
+            padding: 1rem;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            background-color: lightcyan;
+        }
+
+        @media screen and (max-width:1000px) {
+            .item{
+            width: 50%;
+            background-color: lemonchiffon;
+        }
+
+        }
+        @media screen and (max-width:500px) {
+            .item{
+            width: 100%;
+            background-color: lightpink;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maiores distinctio assumenda cupiditate sunt quas quae possimus praesentium dignissimos labore odio dolor, ipsam unde laboriosam consectetur. Ut repellendus consequatur impedit.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maiores distinctio assumenda cupiditate sunt quas quae possimus praesentium dignissimos labore odio dolor, ipsam unde laboriosam consectetur. Ut repellendus consequatur impedit.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maiores distinctio assumenda cupiditate sunt quas quae possimus praesentium dignissimos labore odio dolor, ipsam unde laboriosam consectetur. Ut repellendus consequatur impedit.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maiores distinctio assumenda cupiditate sunt quas quae possimus praesentium dignissimos labore odio dolor, ipsam unde laboriosam consectetur. Ut repellendus consequatur impedit.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maiores distinctio assumenda cupiditate sunt quas quae possimus praesentium dignissimos labore odio dolor, ipsam unde laboriosam consectetur. Ut repellendus consequatur impedit.
+        </div>
+        <div class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maiores distinctio assumenda cupiditate sunt quas quae possimus praesentium dignissimos labore odio dolor, ipsam unde laboriosam consectetur. Ut repellendus consequatur impedit.
+        </div>
+    </div>
+</body>
+</html>
