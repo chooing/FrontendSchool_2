@@ -1,0 +1,15 @@
+$name1: #fff;
+$name2: #f00;
+$이름: #0f0;
+$큰글자: 32px;
+
+.one{
+    font-size: $큰글자;
+    color: $name1;
+}
+.one{
+    color: $name2;
+}
+.one{
+    color: $이름;
+}

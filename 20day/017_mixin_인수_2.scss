@@ -1,0 +1,27 @@
+@mixin pri-button($width, $height, $radius:10px){
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    background-color: salmon;
+}
+@mixin pri-button_($width:70px, $height:80px, $radius:10px){
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    background-color: salmon;
+}
+
+.btn{
+    @include pri-button(100px, 100px, 20px);
+}
+.btn_{
+    @include pri-button(100px, 50px);
+}
+
+.btn__ {
+    @include pri-button_(100px, null, 20px)
+}
+// 중앙값 비우기
+.btn___{
+    @include pri-button_(100px, $radius:20px);
+}

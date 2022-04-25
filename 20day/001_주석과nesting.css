@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* 두 줄 주석입니다.*/
+ul li {
+  color: blueviolet;
+  font-size: 10px;
+}
+
+.one {
+  color: dodgerblue;
+}
+
+.one .two {
+  color: forestgreen;
+}
+
+.one .two .three {
+  color: deeppink;
+}
+
+.one .two .four {
+  color: deeppink;
+}
+
+.two_ {
+  color: forestgreen;
+}
+
+.two_ .three_ {
+  color: deeppink;
+}
+
+.two_ .four_ {
+  color: deeppink;
+}
+/*# sourceMappingURL=001_주석과중첩.css.map */

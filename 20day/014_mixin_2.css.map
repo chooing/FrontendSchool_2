@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,IAAI,CAAA;EAJA,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EAKb,gBAAgB,EAAE,GAAG;CACxB",
+    "sources": [
+        "014_mixin_2.scss"
+    ],
+    "names": [],
+    "file": "014_mixin_2.css"
+}

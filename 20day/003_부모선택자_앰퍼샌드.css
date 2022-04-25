@@ -1,0 +1,12 @@
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: darkorange;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.box:hover {
+  background-color: crimson;
+}
+/*# sourceMappingURL=003_부모선택자_앰퍼샌드.css.map */

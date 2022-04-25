@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EAEA,KAAK,EADG,GAAG;CAKd;;AAND,AAGI,IAHA,CAGA,IAAI,CAAA;EACA,KAAK,EAHD,GAAG;CAIV;;AAGL,AAAA,MAAM,CAAA;EACF,KAAK,EARG,GAAG;CASd",
+    "sources": [
+        "011_변수의_global.scss"
+    ],
+    "names": [],
+    "file": "011_변수의_global.css"
+}
