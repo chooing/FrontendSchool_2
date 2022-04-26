@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAQA,AAAA,EAAE,CAAC;EACC,SAAS,EARK,IAAI;EASlB,WAAW,EAR2B,GAAG;CAS5C",
+    "sources": [
+        "032_scss복습.scss"
+    ],
+    "names": [],
+    "file": "032_scss복습.css"
+}
