@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&family=Noto+Sans+KR&display=swap');
+
 /* reset */
 body, h1, h2, h3, p, ul, li{
     margin: 0;
@@ -16,6 +18,7 @@ ul{
 /* layout */
 body{
     background-color: #222;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .wrap{
@@ -121,7 +124,8 @@ body{
 }
 .history-box:nth-child(even)::after{left: -40px;}
 
-/* .history-box 안의 요소*/
+
+/* .history-box>tag start */
 
 .history-box .tit-history{
     color: #ddd;
@@ -141,7 +145,8 @@ body{
     display: block;
     color: #1c90ff;
     font-size: 65px;
-    font-weight: 900;
+    font-family: 'Khula', sans-serif;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
