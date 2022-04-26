@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+body {
+    background-color: #111;
+}
+.cover {
+    background-color: #222;
+    color: white;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.cover-logo {
+    margin-top: auto;
+}
+.cover-desciption {
+}
+
+.cover-point{
+    margin-top: auto;
+}

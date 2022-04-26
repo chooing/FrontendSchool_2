@@ -1,0 +1,36 @@
+.timeline{
+    width: 800px;
+    margin: 100px auto;
+    border: 1px solid red;
+    position: relative;
+}
+
+.timeline::after{
+    content: '';
+    background-color: darkmagenta;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: -60px auto;
+}
+
+.item{
+    background-color: orange;
+    /* width: 50%; */
+    height: auto;
+    box-sizing: border-box;
+}
+
+.item:nth-child(odd){
+    margin-right: 50%;
+}
+.item:nth-child(even){
+    margin-left: 50%;
+}
+
+.item-inside{
+    padding: 40px;
+}
