@@ -1,13 +1,13 @@
 /* IE10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    header, section, main{
+    main{
         display: block;
     }
 }
 
 /* IE9,10 */
 @media screen and (min-width:0\0){
-    header, section, main{
+    main{
         display: block;
     }
 } 
