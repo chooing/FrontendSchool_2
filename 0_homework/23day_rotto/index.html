@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .tit{
+            text-align: center;
+        }
+        .num-list{
+            list-style: none;
+            display: flex;
+            margin: 0;padding: 0;
+        }
+        p{
+            height: 100px;
+            line-height: 100px;
+            font-weight: bold;
+            font-size: 50px;
+            margin: 20px;
+            text-align: center;
+
+        }        
+        .num{
+            width: 100px;
+            border-radius: 100px;
+            color: #fff;
+        }
+
+
+        .num.gold{background-color: gold;}
+        .num.blue{background-color: lightskyblue;}
+        .num.red{background-color: lightcoral;}
+        .num.black{background-color: gray;}
+        .num.green{background-color: lightgreen;}
+
+    </style>
+</head>
+<body>
+    <h1 class="tit">로또번호 추첨기</h1>
+    <div class="num-list">
+        <p class="num"></p>
+        <p class="num"></p>
+        <p class="num"></p>
+        <p class="num"></p>
+        <p class="num"></p>
+        <p class="num"></p>
+        <p>+</p>
+        <p class="num"></p>
+    </div>
+
+    <script>
+        const lottoArr=[];
+        const numListArr= document.querySelectorAll(".num");
+
+        while (lottoArr.length < numListArr.length) {
+            let randomNum = Math.floor(Math.random()*44+1);
+            if(lottoArr.indexOf(randomNum)==-1)lottoArr.push(randomNum);    
+        }
+        console.log(lottoArr);
+
+        for(let i =0; i<numListArr.length; i++){
+            let color;
+            if(lottoArr[i]>=0 && lottoArr[i]<=10){
+                color="gold";
+            }else if(lottoArr[i]>=11 && lottoArr[i]<=20){
+                color="blue";
+            }else if(lottoArr[i]>=21 && lottoArr[i]<=30){
+                color="red";
+            }else if(lottoArr[i]>=31 && lottoArr[i]<=40){
+                color="black";
+            }else{
+                color="green";
+            }
+            numListArr[i].classList.add(color);
+            numListArr[i].innerText=lottoArr[i];
+        }
+
+    </script>
+</body>
+</html>
