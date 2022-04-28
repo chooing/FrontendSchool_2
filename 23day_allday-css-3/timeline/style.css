@@ -1,0 +1,103 @@
+/* css reset */
+body, ol, li{
+    margin: 0;
+    padding: 0;
+}
+
+ol{list-style-type: none;}
+
+/* layout */
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* components */
+
+.header{
+    background-color: darkkhaki;
+}
+
+.main{
+    background-color: #111111;
+    padding: 40px 0;
+}
+
+.timeline{
+    margin: 0 -40px;
+}
+
+
+.timeline-item{
+    width: 50%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    margin-bottom: -100px;
+    outline: 1px solid red;
+    position: relative;
+}
+
+
+.timeline-item::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin: auto -15px;
+    background-color: #111;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 10px solid dodgerblue;
+}
+
+.timeline-item::before{ 
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    margin: 0 -2px;
+    background-color: dodgerblue;
+    
+}
+.timeline-item:first-child:before{transform: translateY(50%);}
+
+.timeline-item:nth-child(even){margin-left: auto;}
+
+.timeline-item:nth-child(odd)::after{
+    right: 0;
+}
+.timeline-item:nth-child(even)::after{
+    left: 0;
+}
+
+.timeline-item:nth-child(odd)::before{
+    right: 0;
+}
+.timeline-item:nth-child(even)::before{
+    left: 0;
+}
+
+.timeline-item:last-child{margin-bottom: 0;}
+
+.year{
+    background: #222;
+    color: #fff;
+    min-height: 400px;
+    position: relative;
+}
+
+.year::before{
+    content: '';
+    background-color: #222;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0; bottom: 0;
+    margin: auto -15px;
+    transform: rotate(45deg);
+}
+
+.year_left::before{ right: 0; }
+.year_right::before{ left: 0; }
