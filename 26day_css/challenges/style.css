@@ -1,0 +1,30 @@
+body{
+    background-color: #111;
+    color: #999;
+}
+
+.rating,
+.rating::before{
+    background-image: url(./images/happy.png);
+    height: 48px;
+    background-size: 240px 96px;
+
+}
+
+.rating{
+    width: 240px;
+    overflow: hidden;
+}
+
+.rating::before{
+    content: 'wow';
+    display: block;
+    width: 0px;
+    background-position: left bottom;
+}
+
+.rating_10::before{width: 20%;}
+.rating_20::before{width: 40%;}
+.rating_30::before{width: 60%;}
+.rating_40::before{width: 80%;}
+.rating_50::before{width: 100%;}
