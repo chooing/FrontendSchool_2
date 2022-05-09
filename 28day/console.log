@@ -1,0 +1,52 @@
+let data = [
+    {회원번호:0, 아이디:'a', 성별:'남', 나이:21},
+    {회원번호:1, 아이디:'b', 성별:'남', 나이:17},
+    {회원번호:2, 아이디:'c', 성별:'여', 나이:6},
+    {회원번호:3, 아이디:'d', 성별:'여', 나이:55}
+]
+
+for (let i = 0; i < data.length; i++) {
+    console.log(data[i]);
+}
+VM11:9 {회원번호: 0, 아이디: 'a', 성별: '남', 나이: 21}
+VM11:9 {회원번호: 1, 아이디: 'b', 성별: '남', 나이: 17}
+VM11:9 {회원번호: 2, 아이디: 'c', 성별: '여', 나이: 6}
+VM11:9 {회원번호: 3, 아이디: 'd', 성별: '여', 나이: 55}
+undefined
+for (let i = 0; i < data.length; i++) {
+    if(data[i]['나이'] >= 20 && data[i]['성별'] == '여'){
+        console.log(data[i][회원번호])
+    }
+}
+VM444:3 Uncaught ReferenceError: 회원번호 is not defined
+    at <anonymous>:3:29
+(익명) @ VM444:3
+for (let i = 0; i < data.length; i++) {
+    if(data[i]['나이'] >= 20 && data[i]['성별'] == '여'){
+        console.log(data[i]['회원번호'])
+    }
+}
+VM470:3 3
+undefined
+result = []
+for (let i = 0; i < data.length; i++) {
+    if(data[i]['나이'] >= 20 && data[i]['성별'] == '여'){
+        result.push(data[i]['회원번호'])
+    }
+}
+1
+result
+[3]
+data.filter(i=> i['나이'] >= 20 && i['성별'] == '여')
+[{…}]0: {회원번호: 3, 아이디: 'd', 성별: '여', 나이: 55}length: 1[[Prototype]]: Array(0)
+let 나이총합 = 0
+for (let i = 0; i < data.length; i++) {
+    나이총합 += data[i]['나이'] // 나이총합 = 나이총합 + data[i]['나이']
+}
+99
+나이총합/data.length
+24.75
+data.map(i=> i['나이'])
+(4) [21, 17, 6, 55]
+data.map(i=> i['나이']).reduce((a, b) =>a + b, 0)
+99
