@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 연습문제(배운것을 사용하여 아래 화살표 함수로 되어 있는 것을 일반 함수로 바꿔주세요.)
+        
+        let data = [{
+                반 : 1, 
+                번 : 1, 
+                이름 : "호준", 
+                중간고사점수 : 55
+            }, {
+                반 : 1, 
+                번 : 2, 
+                이름 : "길동", 
+                중간고사점수 : 60
+            }, {
+                반 : 1, 
+                번 : 3, 
+                이름 : "영희", 
+                중간고사점수 : 30
+            }, {
+                반 : 1, 
+                번 : 4, 
+                이름 : "철수", 
+                중간고사점수 : 20
+            }, {
+                반 : 1, 
+                번 : 5, 
+                이름 : "규리", 
+                중간고사점수 : 100
+            }]
+
+            // console.log(data.map(x => x.중간고사점수))
+            function 점수(student) {
+                return student['중간고사점수'];
+            }
+            console.log(data.map(점수));
+
+            // console.log(data.map(x => [x.이름,x.중간고사점수]));
+            function 이름점수(student) {
+                return [student['이름'], student['중간고사점수']];
+            }
+            console.log(data.map(이름점수));
+
+
+            let data2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+            let newData = data2.map(a => a.map(n => n * 2));
+            console.log(newData);
+            
+            let newData2 = data2.map(곱하기2);
+            function 곱하기2(arr) {
+                const [i,j,k]=arr;
+                arr=[i*2,j*2,k*2];
+                return arr;
+            }
+
+
+            console.log(newData2);
+
+        // 1. `[10, 20, 30, 40]` 값의 평균을 구하는 **함수**를 만들어주세요.
+        const arr = [10, 20, 30, 40];
+        function average(numArr){
+            let result =0;
+            for (const num of numArr) {
+                result += num;
+            }
+            return result / numArr.length;
+        }
+        console.log(average(arr));
+        
+        // 2. (나아가기) 숫자단위 콤마를 찍는 **함수**를 만들어주세요.
+        function numRest(num) {
+            num = num+'';
+            if(num.length > 3){
+                const numArr = num.split('');
+                for (let i = 3; i < numArr.length; i+=4) {
+                    numArr.splice(-i,0,',');
+                    num = numArr.join('');
+                }
+            }
+            return num
+        }
+        console.log(numRest(100));
+        
+    </script>
+</body>
+</html>
