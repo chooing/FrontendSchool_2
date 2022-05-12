@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background-color: #999;
+            border-radius: 100%;
+            margin: 50px auto;
+        }
+
+        .btn_wrap{
+            text-align: center;
+        }
+        .red{background-color: red;}
+        .yellow{background-color: gold;}
+        .green{background-color: green;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="btn_wrap">
+        <button type="button" class="red-btn" value="red">빨강</button>
+        <button type="button" class="yellow-btn" value="yellow">노링</button>
+        <button type="button" class="green-btn" value="green">초록</button>
+    </div>
+
+    <script>
+        const box = document.querySelector('.box');
+        const redBtn = document.querySelector('.red-btn');
+        const yellowBtn = document.querySelector('.yellow-btn');
+        const greenBtn = document.querySelector('.green-btn');
+
+        const clickHandle =  function(e) {
+            box.classList.remove('yellow','green','red');
+            box.classList.add(e.target.value);
+        }
+        
+        redBtn.addEventListener('click',clickHandle);
+        yellowBtn.addEventListener('click',clickHandle);
+        greenBtn.addEventListener('click',clickHandle);
+
+
+        // redBtn.addEventListener('click',function(){
+        //     box.classList.remove('yellow','green');
+        //     box.classList.add('red');
+        // });
+        // yellowBtn.addEventListener('click',function(){
+        //     box.classList.remove('red','green');
+        //     box.classList.add('yellow');
+        // });
+        // greenBtn.addEventListener('click',function(){
+        //     box.classList.remove('yellow','red');
+        //     box.classList.add('green');
+        // });
+
+        const btnArr = [redBtn, yellowBtn, greenBtn];
+
+        btnArr.forEach((btn)=>{
+            btn.addEventListener('click',()=>{
+                box.classList.remove('yellow','green','red');
+                if(btn.className=='red-btn'){
+                    box.classList.add('red');
+                } else if(btn.className=='yellow-btn'){
+                    box.classList.add('yellow');
+                }else{
+                    box.classList.add('green');
+                }
+            }
+            )
+        })
+
+
+        /////////////////////////////////////강사님 코드
+
+        // const canvas = document.s('.canvas');
+        // const btnRed = document.querySelector('.btn-red');
+        // const btnYellow = document.querySelector('.btn-yellow');
+        // const btnGreen = document.querySelector('.btn-green');
+
+        // btnRed.addEventListener('click', () => {
+        //     canvas.classList.remove('yellow', 'green');
+        //     canvas.classList.add('red');
+        // });
+
+        // btnYellow.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'green');
+        //     canvas.classList.add('yellow');
+        // });
+
+        // btnGreen.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow');
+        //     canvas.classList.add('green');
+        // });
+        // btnGreen.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow');
+        //     canvas.classList.add('green');
+        // });
+
+        // btnGreen.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow');
+        //     canvas.classList.add('green');
+        // });
+
+        // const btnArr = [btnRed, btnYellow, btnGreen];
+
+        // btnArr.forEach((element) => {
+        //     element.addEventListener('click', () => {
+        //         canvas.classList.remove('red', 'green', 'yellow');
+        //         if (element.className === 'btn-red') {
+        //             canvas.classList.add('red')
+        //         } else if (element.className === 'btn-yellow') {
+        //             canvas.classList.add('yellow')
+        //         } else {
+        //             canvas.classList.add('green')
+        //         }
+        //     })
+        // })
+    </script>
+</body>
+</html>

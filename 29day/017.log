@@ -34,163 +34,163 @@ let value3 = {
 for (let i in value) {
     console.log(i);
 }
-// VM472:2 0
-// VM472:2 1
-// VM472:2 2
-// VM472:2 3
-// VM472:2 4
-// VM472:2 5
+//  0
+//  1
+//  2
+//  3
+//  4
+//  5
 typeof value
 'object'
 
 for (let i in value2) {
     console.log(i);
 }
-// VM518:2 피카츄
-// VM518:2 라이츄
-// VM518:2 파이리
-// VM518:2 꼬부기
-// VM518:2 버터플
-// VM518:2 야도란
-// VM518:2 피죤투
-// VM518:2 또가스
-// VM518:2 메타몽
+//  피카츄
+//  라이츄
+//  파이리
+//  꼬부기
+//  버터플
+//  야도란
+//  피죤투
+//  또가스
+//  메타몽
 
 for (let i in value2) {
     console.log(i);
     console.log(value2[i]);
 }
-// VM657:2 피카츄
-// VM657:3 1
-// VM657:2 라이츄
-// VM657:3 2
-// VM657:2 파이리
-// VM657:3 3
-// VM657:2 꼬부기
-// VM657:3 4
-// VM657:2 버터플
-// VM657:3 5
-// VM657:2 야도란
-// VM657:3 6
-// VM657:2 피죤투
-// VM657:3 7
-// VM657:2 또가스
-// VM657:3 8
-// VM657:2 메타몽
-// VM657:3 9
+//  피카츄
+//  1
+//  라이츄
+//  2
+//  파이리
+//  3
+//  꼬부기
+//  4
+//  버터플
+//  5
+//  야도란
+//  6
+//  피죤투
+//  7
+//  또가스
+//  8
+//  메타몽
+//  9
 for (let i in value3) {
     console.log(i);
     console.log(value2[i]);
 }
-// VM672:2 피카츄
-// VM672:3 1
-// VM672:2 라이츄
-// VM672:3 2
-// VM672:2 파이리
-// VM672:3 3
-// VM672:2 꼬부기
-// VM672:3 4
-// VM672:2 버터플
-// VM672:3 5
-// VM672:2 야도란
-// VM672:3 6
-// VM672:2 피죤투
-// VM672:3 7
-// VM672:2 또가스
-// VM672:3 8
-// VM672:2 메타몽
-// VM672:3 9
+//  피카츄
+//  1
+//  라이츄
+//  2
+//  파이리
+//  3
+//  꼬부기
+//  4
+//  버터플
+//  5
+//  야도란
+//  6
+//  피죤투
+//  7
+//  또가스
+//  8
+//  메타몽
+//  9
 
 for (let i in value3) {
     console.log(i);
     console.log(value2[i]);
 }
 
-// VM679:2 피카츄
-// VM679:3 1
-// VM679:2 라이츄
-// VM679:3 2
-// VM679:2 파이리
-// VM679:3 3
-// VM679:2 꼬부기
-// VM679:3 4
-// VM679:2 버터플
-// VM679:3 5
-// VM679:2 야도란
-// VM679:3 6
-// VM679:2 피죤투
-// VM679:3 7
-// VM679:2 또가스
-// VM679:3 8
-// VM679:2 메타몽
-// VM679:3 9
+//  피카츄
+//  1
+//  라이츄
+//  2
+//  파이리
+//  3
+//  꼬부기
+//  4
+//  버터플
+//  5
+//  야도란
+//  6
+//  피죤투
+//  7
+//  또가스
+//  8
+//  메타몽
+//  9
 
 for (let i in value3) {
     console.log(i);
     console.log(value3[i]);
 }
-// VM697:2 피카츄
-// VM697:3 10
-// VM697:2 라이츄
-// VM697:3 20
-// VM697:2 파이리
-// VM697:3 30
-// VM697:2 꼬부기
-// VM697:3 40
-// VM697:2 버터플
-// VM697:3 50
-// VM697:2 야도란
-// VM697:3 60
-// VM697:2 피죤투
-// VM697:3 70
-// VM697:2 또가스
-// VM697:3 80
-// VM697:2 메타몽
-// VM697:3 90
+//  피카츄
+//  10
+//  라이츄
+//  20
+//  파이리
+//  30
+//  꼬부기
+//  40
+//  버터플
+//  50
+//  야도란
+//  60
+//  피죤투
+//  70
+//  또가스
+//  80
+//  메타몽
+//  90
 
 for (let i in 'hello world') {
     console.log(i);
 }
 
-// VM766:2 0
-// VM766:2 1
-// VM766:2 2
-// VM766:2 3
-// VM766:2 4
-// VM766:2 5
-// VM766:2 6
-// VM766:2 7
-// VM766:2 8
-// VM766:2 9
-// VM766:2 10
+//  0
+//  1
+//  2
+//  3
+//  4
+//  5
+//  6
+//  7
+//  8
+//  9
+//  10
 
 for (let i in 'hello world') {
     console.log(i);
     console.log('hello world'[i]);
 }
 
-// VM933:2 0
-// VM933:3 h
-// VM933:2 1
-// VM933:3 e
-// VM933:2 2
-// VM933:3 l
-// VM933:2 3
-// VM933:3 l
-// VM933:2 4
-// VM933:3 o
-// VM933:2 5
-// VM933:3  
-// VM933:2 6
-// VM933:3 w
-// VM933:2 7
-// VM933:3 o
-// VM933:2 8
-// VM933:3 r
-// VM933:2 9
-// VM933:3 l
-// VM933:2 10
-// VM933:3 d
+//  0
+//  h
+//  1
+//  e
+//  2
+//  l
+//  3
+//  l
+//  4
+//  o
+//  5
+//   
+//  6
+//  w
+//  7
+//  o
+//  8
+//  r
+//  9
+//  l
+//  10
+//  d
 
 Object.keys(value3)
 // (9) ['피카츄', '라이츄', '파이리', '꼬부기', '버터플', '야도란', '피죤투', '또가스', '메타몽']
@@ -198,24 +198,24 @@ let 포켓몬 = Object.keys(value3);
 for (let i of [10, 20, 30, 40]) {
     console.log(i);
 }
-// VM1319:2 10
-// VM1319:2 20
-// VM1319:2 30
-// VM1319:2 40
+// VM1319 10
+// VM1319 20
+// VM1319 30
+// VM1319 40
 for (let i of 'hello world') {
     console.log(i);
 }
-// VM1368:2 h
-// VM1368:2 e
-// VM1368:2 l
-// VM1368:2 l
-// VM1368:2 o
-// VM1368:2  
-// VM1368:2 w
-// VM1368:2 o
-// VM1368:2 r
-// VM1368:2 l
-// VM1368:2 d
+// VM1368 h
+// VM1368 e
+// VM1368 l
+// VM1368 l
+// VM1368 o
+// VM1368  
+// VM1368 w
+// VM1368 o
+// VM1368 r
+// VM1368 l
+// VM1368 d
 for (let i of value3) {
     console.log(i);
 }
@@ -223,56 +223,56 @@ for (let i of value3) {
 for (let i of Object.entries(value3)) {
     console.log(i);
 }
-// VM1444:2 (2) ['피카츄', 10]
-// VM1444:2 (2) ['라이츄', 20]
-// VM1444:2 (2) ['파이리', 30]
-// VM1444:2 (2) ['꼬부기', 40]
-// VM1444:2 (2) ['버터플', 50]
-// VM1444:2 (2) ['야도란', 60]
-// VM1444:2 (2) ['피죤투', 70]
-// VM1444:2 (2) ['또가스', 80]
-// VM1444:2 (2) ['메타몽', 90]
+// VM1444 (2) ['피카츄', 10]
+// VM1444 (2) ['라이츄', 20]
+// VM1444 (2) ['파이리', 30]
+// VM1444 (2) ['꼬부기', 40]
+// VM1444 (2) ['버터플', 50]
+// VM1444 (2) ['야도란', 60]
+// VM1444 (2) ['피죤투', 70]
+// VM1444 (2) ['또가스', 80]
+// VM1444 (2) ['메타몽', 90]
 
 for (let [i, j] of Object.entries(value3)) {
     console.log(i);
     console.log(j);
 }
-// VM1635:2 피카츄
-// VM1635:3 10
-// VM1635:2 라이츄
-// VM1635:3 20
-// VM1635:2 파이리
-// VM1635:3 30
-// VM1635:2 꼬부기
-// VM1635:3 40
-// VM1635:2 버터플
-// VM1635:3 50
-// VM1635:2 야도란
-// VM1635:3 60
-// VM1635:2 피죤투
-// VM1635:3 70
-// VM1635:2 또가스
-// VM1635:3 80
-// VM1635:2 메타몽
-// VM1635:3 90
+// VM1635 피카츄
+// VM1635 10
+// VM1635 라이츄
+// VM1635 20
+// VM1635 파이리
+// VM1635 30
+// VM1635 꼬부기
+// VM1635 40
+// VM1635 버터플
+// VM1635 50
+// VM1635 야도란
+// VM1635 60
+// VM1635 피죤투
+// VM1635 70
+// VM1635 또가스
+// VM1635 80
+// VM1635 메타몽
+// VM1635 90
 for (let [i, j] of [[1, 2], [3, 4]]) {
     console.log(i, j);
 }
-// VM1677:2 1 2
-// VM1677:2 3 4
+// VM1677 1 2
+// VM1677 3 4
 [[[1, 2], 2], [[1, 2], 4]] // 구조분해할당
 
 for (let [i, j] of [[[1, 2], 2], [[1, 2], 4]]) {
     console.log(i, j);
 }
-// VM1798:2 (2) [1, 2] 2
-// VM1798:2 (2) [1, 2] 4
+// VM1798 (2) [1, 2] 2
+// VM1798 (2) [1, 2] 4
 
 for (let [[a, b], j] of [[[1, 2], 2], [[1, 2], 4]]) {
     console.log(a, b, j);
 }
-// VM1868:2 1 2 2
-// VM1868:2 1 2 4
+// VM1868 1 2 2
+// VM1868 1 2 4
 
 [a, b] = [10, 20]
 a
@@ -390,19 +390,19 @@ let 변수 = [15, 22, 33, 111, 2]
 for (let i of 변수) {
     console.log(i)
 }
-// VM4428:2 15
-// VM4428:2 22
-// VM4428:2 33
-// VM4428:2 111
-// VM4428:2 2
+// VM4428 15
+// VM4428 22
+// VM4428 33
+// VM4428 111
+// VM4428 2
 for (let i of 변수) {
     console.log(''+i)
 }
-// VM4446:2 15
-// VM4446:2 22
-// VM4446:2 33
-// VM4446:2 111
-// VM4446:2 2
+// VM4446 15
+// VM4446 22
+// VM4446 33
+// VM4446 111
+// VM4446 2
 '' + 10
 '10'
 10 + ''
@@ -426,22 +426,22 @@ for (let i of 변수) {
     let s = ''+i;
     console.log(s.split(''))
 }
-// VM4896:3 (2) ['1', '5']
-// VM4896:3 (2) ['2', '2']
-// VM4896:3 (2) ['3', '3']
-// VM4896:3 (3) ['1', '1', '1']
-// VM4896:3 ['2']
+// VM4896 (2) ['1', '5']
+// VM4896 (2) ['2', '2']
+// VM4896 (2) ['3', '3']
+// VM4896 (3) ['1', '1', '1']
+// VM4896 ['2']
 
 for (let i of 변수) {
     let s = ''+i;
     console.log(s.split(''))
 }
 
-// VM4915:3 (2) ['1', '5']
-// VM4915:3 (2) ['2', '2']
-// VM4915:3 (2) ['3', '3']
-// VM4915:3 (3) ['1', '1', '1']
-// VM4915:3 ['2']
+// VM4915 (2) ['1', '5']
+// VM4915 (2) ['2', '2']
+// VM4915 (2) ['3', '3']
+// VM4915 (3) ['1', '1', '1']
+// VM4915 ['2']
 
 let sum = 0
 for (let i of 변수) {
@@ -548,11 +548,11 @@ function 안녕(){
 for (let i = 0; i < 5; i++) {
     안녕()
 }
-// VM6635:2 hello worldfunction
-// VM6635:2 hello world
-// VM6635:2 hello world
-// VM6635:2 hello world
-// VM6635:2 hello world
+// VM6635 hello worldfunction
+// VM6635 hello world
+// VM6635 hello world
+// VM6635 hello world
+// VM6635 hello world
 
 안녕()
 
@@ -600,20 +600,20 @@ function 다더해라3(a, b, c) {
 for (let ii = 0; ii < 5; ii++) {
     console.log(ii)
 }
-// VM8221:2 0
-// VM8221:2 1
-// VM8221:2 2
-// VM8221:2 3
-// VM8221:2 4
+// VM8221 0
+// VM8221 1
+// VM8221 2
+// VM8221 3
+// VM8221 4
 
 for (var iii = 0; iii < 5; iii++) {
     console.log(iii)
 }
-// VM8383:2 0
-// VM8383:2 1
-// VM8383:2 2
-// VM8383:2 3
-// VM8383:2 4
+// VM8383 0
+// VM8383 1
+// VM8383 2
+// VM8383 3
+// VM8383 4
 
 console.log(iii)
 VM8441:1 5
@@ -631,39 +631,39 @@ VM8687:4 3
 for (let i of 'hello') {
     console.log(i)
 }
-VM8746:2 h
-VM8746:2 e
-VM8746:2 l
-VM8746:2 l
-VM8746:2 o
+VM8746 h
+VM8746 e
+VM8746 l
+VM8746 l
+VM8746 o
 
 for (let i of [[1, 2], [3, 4], [5, 6]]) {
     console.log(i)
 }
-VM8816:2 (2) [1, 2]
-VM8816:2 (2) [3, 4]
-VM8816:2 (2) [5, 6]
+VM8816 (2) [1, 2]
+VM8816 (2) [3, 4]
+VM8816 (2) [5, 6]
 
 for (let [i, j] of [[1, 2], [3, 4], [5, 6]]) {
     console.log(i, j)
 }
-VM8862:2 1 2
-VM8862:2 3 4
-VM8862:2 5 6
+VM8862 1 2
+VM8862 3 4
+VM8862 5 6
 
 for (let i in [10, 20, 30]){
     console.log(i)
 } 
-VM9017:2 0
-VM9017:2 1
-VM9017:2 2
+VM9017 0
+VM9017 1
+VM9017 2
 
-for (let i in {one:1, two:2, three:3}){
+for (let i in {one:1, two, three}){
     console.log(i)
 } 
-VM9082:2 one
-VM9082:2 two
-VM9082:2 three
+VM9082 one
+VM9082 two
+VM9082 three
 
 let [i, j, k] = [10, 20, 30]
 
@@ -771,8 +771,8 @@ function 안녕(){
 }
 
 console.log(안녕())
-VM12292:2 hello world 1
-VM12292:3 hello world 2
+VM12292 hello world 1
+VM12292 hello world 2
 VM12292:4 hello world 3
 VM12360:1 
 
@@ -784,8 +784,8 @@ function 안녕(){
 }
 
 console.log(안녕())
-VM12413:2 hello world 1
-VM12413:3 hello world 2
+VM12413 hello world 1
+VM12413 hello world 2
 VM12413:4 hello world 3
 VM12419:1 
 
@@ -828,12 +828,12 @@ console.dir(test1)
 (function 이름(){
     console.log('hello world')
 }())
-VM13254:2 hello world
+VM13254 hello world
 
 (function(){
     console.log('hello world')
 }())
-VM13270:2 hello world
+VM13270 hello world
 
 // 즉시 실행 함수
 
@@ -846,7 +846,7 @@ VM13388:1 Uncaught ReferenceError: 이름 is not defined
     let y = 20;
     console.log(x + y)
 )
-VM13544:2 Uncaught SyntaxError: Unexpected identifier
+VM13544 Uncaught SyntaxError: Unexpected identifier
 (function 이름2(){
     let x = 10;
     let y = 20;
@@ -881,10 +881,10 @@ function 함수7(a, b, c){
 }
 
 함수7(10, 20)
-VM14528:2 10 20 
+VM14528 10 20 
 
 함수7(10, 20, 30, 40, 50)
-VM14528:2 10 20 30
+VM14528 10 20 30
 
 function 함수7(a, b, ...c){
     console.log(a, b, c)
@@ -982,17 +982,17 @@ sigma(100)
 for (let i of 'hello world') {
     console.log(i);
 }
-VM15985:2 h
-VM15985:2 e
-VM15985:2 l
-VM15985:2 l
-VM15985:2 o
-VM15985:2  
-VM15985:2 w
-VM15985:2 o
-VM15985:2 r
-VM15985:2 l
-VM15985:2 d
+VM15985 h
+VM15985 e
+VM15985 l
+VM15985 l
+VM15985 o
+VM15985  
+VM15985 w
+VM15985 o
+VM15985 r
+VM15985 l
+VM15985 d
 
 let s = ''
 for (let i of 'hello world') {
