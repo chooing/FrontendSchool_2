@@ -42,15 +42,20 @@
         }
 
         .list-member {
-            display: none;
+            /* display: none; */
             width: 100%;
             position: absolute;
             left: 0;
             top: 51px;
             background: #FFF;
-            border: 1px solid #C4C4C4;
+            /* border: 1px solid #C4C4C4; */
             box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
+            max-height: 0;
+
+            transition: all .5s;
+            border: 0px solid #C4C4C4;
+            overflow: hidden;
         }
 
         .btn-select.on {
@@ -58,7 +63,8 @@
         }
 
         .btn-select.on+.list-member {
-            display: block;
+            max-height:calc(50px * 5);
+            border: 1px solid #C4C4C4;
         }
 
         .list-member li {
@@ -105,13 +111,18 @@
     <script>
         const selectBox = document.querySelector('.btn-select');
         const listMember = document.querySelector('.list-member');
+        const contSelect = document.querySelector('.cont-select');
 
         selectBox.addEventListener('click',(e)=>{
             e.target.classList.toggle('on');
         });
+        
+        selectBox.addEventListener('blur',(e)=>{
+            e.target.classList.remove('on');
+        });
 
-        listMember.addEventListener('click',(e)=>{
-            selectBox.classList.toggle('on');
+        listMember.addEventListener('mousedown',(e)=>{
+            console.dir(e.target.textContent);
             selectBox.textContent = e.target.textContent.trim();
         });
 
