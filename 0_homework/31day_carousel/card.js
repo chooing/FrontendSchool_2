@@ -129,7 +129,7 @@ let cardView = 0;
 
 btnWrap.addEventListener('click', (e)=>{
     let windowWidth =window.innerWidth / 2;
-
+    
     // rotate cards
     if(e.clientX >= windowWidth){
         rootTheme.style.setProperty('--count', --count);
