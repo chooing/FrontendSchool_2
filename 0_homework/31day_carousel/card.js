@@ -146,13 +146,9 @@ btnWrap.addEventListener('click', (e)=>{
         cardView = cardNum - (count % 8);
     }
 
-
     //cssClass 'on' REMOVE & ADD 
     for (const card of cards) {
         card.classList.remove('on');
     }
-
     cards[cardView].classList.add('on')
-    console.log(cards);
-
 });

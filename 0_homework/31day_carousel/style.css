@@ -99,7 +99,7 @@ body{
 }
 
 .card .card-back{
-    padding: 35px;
+    padding: 32px;
     font-size: 19px;
 
     transform: rotateY(-180deg);
