@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        function NewFactory2(name){
+            this.name = name
+        }
+
+        NewFactory2.prototype.sayYourName = function(){
+            console.log(`나는 ${this.name}, 이건 잘 참지~`);
+        }
+
+        const newbot1 = new NewFactory2('재현');
+        newbot1.name
+        newbot1.sayYourName()
+        const newbot2 = new NewFactory2('브랜든');
+        newbot2.sayYourName();
+        newbot2.sayYourName();
+        console.log(newbot1.sayYourName === newbot2.sayYourName);
+    </script>
+
+    <!-- <script>
+        // 실습: 우리가 만들었던 음식 로봇객체의 메서드를 프로토타입으로 분리해보세요, 그리고 객체의 메서드가 서로 동일한 주소를 참조하는지 확인해보세요.
+        const foods = ['짜장면','볶음밥','해장국','치킨']
+        const foods2 = ['김밥','돈까쓰','파스타','스테이크']
+        function FoodBot(foodNames){
+            this.menu = foodNames
+        }
+
+        FoodBot.prototype.sayMenu = function(){
+            let num = Math.floor(Math.random() * this.menu.length);
+            console.log(this.menu[num]);
+        }
+
+        const foodBotMark1 = new FoodBot(foods);
+        const foodBotMark2 = new FoodBot(foods2);
+        foodBotMark1.sayMenu();
+        foodBotMark2.sayMenu();
+        console.log(foodBotMark1.sayMenu === foodBotMark2.sayMenu);
+    </script> -->
+
+
+    <script>
+        // 강사님 풀이
+        const foods = ['짜장면', '뽁음밥', '해장국', '치킨'];
+
+        function FoodBot(foodNames) {
+            this.menu = foodNames;
+        }
+
+        FoodBot.prototype.sayMenu = function () {
+            console.log(this.menu[Math.floor(Math.random() * this.menu.length)]);
+        };
+
+        const foodBotMark1 = new FoodBot(foods);
+    </script>
+
+    <!-- <script>
+        // 실습2: 우리가 객체지향 개념에서 만들었던 ‘나’ 와 ‘대상’ 객체를 생성자를 통해서 만들어 볼 수 있도록 코드를 수정해봅시다.
+        // const me = {
+        //     name : '홍길동',
+        //     address : '바람처럼왔다가 이슬처럼 가는 곳',
+        //     phoneNum : '010-0000-0000',
+        //     canWalk : function(){
+        //         console.log('재현이가 걷는다.');
+        //     },
+        //     teaching : function(student){
+        //         student.levelUp();
+        //     }
+        // }
+
+        function ItsMe(name,address,phoneNum){
+            this.name = name,
+            this.address = address,
+            this.phoneNum = phoneNum
+        }
+
+        ItsMe.prototype.canWalk = function(){
+            console.log(`${this.name}이(가) 걷는다.`);
+        }
+
+        ItsMe.prototype.teaching = function(student){
+            student.levelUp();
+        }
+
+        const me = new ItsMe('홍길동', '바람처럼왔다가 이슬처럼 가는 곳', '010-0000-0000');
+        me.canWalk();
+    </script> -->
+
+    <script>
+        // 강사님 풀이
+        function Me(name,address,phoneNum){
+            this.name = name,
+            this.address = address,
+            this.phoneNum = phoneNum
+        }
+
+        Me.prototype.canWalk = function(){
+            console.log(`${this.name}이(가) 걷는다.`);
+        }
+
+        Me.prototype.teaching = function(student){
+            student.levelUp();
+        }
+
+        const me = new Me('홍길동', '바람처럼왔다가 이슬처럼 가는 곳', '010-0000-0000');
+
+        function Student(level){
+            this.level = level;
+        }
+
+        Student.prototype.levelUp = function(){
+            this.level++;
+        }
+
+        const student = new Student(1);
+        me.teaching(student);
+        console.log(student.level);
+    </script>
+</body>
+</html>

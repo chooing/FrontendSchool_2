@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 문제 : 다음 수 중, 그 차가 가장 적은 숫자의 쌍을 h1태그로 출력해주세요.
+        [10, 12, 15, 19, 22, 25, 29, 30, 35, 39]
+        정답 : [29, 30] -->
+    <script>
+        const arr =[10, 12, 15, 19, 22, 25, 29, 30, 35, 39];
+
+        
+        let resultIndex = 0;
+        let num = Number.MAX_SAFE_INTEGER;
+        
+        for (let i = 1; i <= arr.length; i++) {
+            if(num >= arr[i] - arr[i-1]){
+                num = arr[i] - arr[i-1];
+                resultIndex = i;
+            }
+        }
+        
+        console.log(resultIndex);
+        
+        console.log([arr[resultIndex-1], arr[resultIndex]]);
+
+
+</script>
+</body>
+</html>
