@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- <script>
+        function Robot(name){
+            this.name = name;
+        }
+
+        Robot.prototype.sayYourName = function(){
+            console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+
+        const bot1 = new Robot('zozo');
+        bot1.sayYourName();
+    </script> -->
+
+    <script>
+        class RobotClass{
+            constructor(name){
+                this.name  = name;
+            }
+
+            sayYourName(){
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+        }
+
+        const botClass1 = new RobotClass('클래수');
+        botClass1.sayYourName();
+        
+        const botClass2 = new RobotClass('알파고');
+        botClass2.sayYourName();
+
+        botClass1.sayYourName === botClass2.sayYourName  //true
+        //프로토 타입 적을 필요가 없다.
+    </script>
+
+    <script>
+        class Choo{
+            constructor(name,address){
+                this.name  = name;
+                this.address = address;
+            }
+
+            canCodeing(){
+                console.log(`${this.name}는 ${this.address}에서 코딩합니다.`);
+            }
+        }
+
+        const choo = new Choo('choo','서울');
+        choo.canCodeing();
+    </script>
+
+    <script>
+        class Me {
+            // 그리고 생성자 함수는 new 키워드가 호출될때 자동으로 실행됩니다.
+            constructor(name, address, phoneNum) {
+                this.name = name;
+                this.address = address;
+                this.phoneNum = phoneNum;
+            }
+
+            canWalk = function () {
+                console.log('재현이가 걷는다.');
+            }
+
+            teaching = function (student) {
+                student.levelUp();
+            }
+        }
+
+        class Student {
+            constructor(level) {
+                this.level = level;
+            }
+            levelUp = function () {
+                this.level++;
+            }
+        }
+
+        const me = new Me('재현', '010-0101-0101', '제주도');
+        const student = new Student(1);
+
+        me.teaching(student);
+        console.log(student.level);
+
+    </script>
+</body>
+</html>
