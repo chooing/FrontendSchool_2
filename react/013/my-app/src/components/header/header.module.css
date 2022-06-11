@@ -1,0 +1,22 @@
+.wrap{
+    background-color: #222;
+    padding: 10px 20px;
+    color:aqua;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_wrap{
+    
+}
+
+.nav{
+    display: flex;
+    gap: 0 15px;
+}
+
+.nav li.on{
+    color: #eee;
+}
