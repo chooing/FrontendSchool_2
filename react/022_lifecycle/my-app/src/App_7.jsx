@@ -1,6 +1,9 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 
+import ReactDOM from 'react-dom/client';
+
 function App() {
+
   const [num, setNum] = useState(0)
 
   const handleonClick = () => {
@@ -8,49 +11,52 @@ function App() {
   }
 
   useLayoutEffect(()=>{
-    console.log('useLayoutEffect 1')
+    console.log(1)
     return () => {
-      console.log('useLayoutEffect return_1')
+      console.log('return_1')
     }
   }, [])
 
   useLayoutEffect(()=>{
-    console.log('useLayoutEffect 2')
+    console.log(2)
     return () => {
-      console.log('useLayoutEffect return_2')
+      console.log('return_2')
     }
   })
 
   useLayoutEffect(()=>{
-    console.log('useLayoutEffect 3')
+    console.log(3)
     return () => {
-      console.log('useLayoutEffect return_3')
+      console.log('return_3')
     }
   }, [num])
 
   useEffect(()=>{
     console.log('useEffect 1')
     return () => {
-      console.log('useEffect return_1')
+      console.log('useEffect_return_1')
     }
   }, [])
 
   useEffect(()=>{
     console.log('useEffect 2')
     return () => {
-      console.log('useEffect return_2')
+      console.log('useEffect_return_2')
     }
   })
 
   useEffect(()=>{
     console.log('useEffect 3')
     return () => {
-      console.log('useEffect return_3')
+      console.log('useEffect_return_3')
     }
   }, [num])
 
   return (
-    <button onClick={handleonClick}>{num}</button>
+    <div className="App">
+      <button onClick={handleonClick}>{num}</button>
+      <Wrap/>
+    </div>
   );
 }
 
@@ -66,4 +72,4 @@ const Wrap = ()=>{
   )
 }
 
-export default Wrap;
+export default App;
