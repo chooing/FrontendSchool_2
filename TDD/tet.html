@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        article{
+            display: inline-block;
+            border: 8px solid lightcoral;    
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .viewer{
+            display: block;
+            font-size: 30px;
+            color:teal;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <strong class="viewer"></strong>
+        <label for="inpTxt">입력어</label>
+        <input id="inpTxt" type="text" class="inp-txt">
+        <button type="button" class="btn-push">적용</button>
+    </article>
+
+    <script>
+        
+        function writeText(){
+            
+            let txt = 'hello lion!!';
+            const viewer = document.querySelector('.viewer');
+            viewer.textContent = txt;
+            
+            function pushText(){
+                const inpTxt = document.querySelector('.inp-txt');
+                viewer.textContent = inpTxt.value;
+            }
+
+            const btnPush = document.querySelector('.btn-push');
+            btnPush.addEventListener('click',pushText);
+        }
+        writeText()
+    </script>
+</body>
+</html>
