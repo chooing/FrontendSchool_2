@@ -7,14 +7,14 @@
     <title></title>
 </head>
 <body>
-    <textarea name="" id="innerMemo" cols="30" rows="10"></textarea>
-    <button type="button" id="uploadBtn">등록</button>
-    <ul id="show"></ul>
+    <textarea name="txtWrite" id="txtWrite" class="txt-write" cols="30" rows="10"></textarea>
+    <button type="button" class="btn-upload">등록</button>
+    <ol class="memo-list"></ol>
     
     <script>
-        const textareaText = document.getElementById('innerMemo');
-        const uploadBtn = document.getElementById('uploadBtn');
-        const showUl = document.getElementById('show');
+        const textareaText = document.querySelector('.txt-write');
+        const uploadBtn = document.querySelector('.btn-upload');
+        const showUl = document.querySelector('.memo-list');
         const memes=[];
 
         if(localStorage.getItem('memoList')){ //localStorage에 memo가 있으면 첫 화면 작성

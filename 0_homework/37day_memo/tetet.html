@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메모장만들기</title>
+</head>
+<body>
+    <textarea name="" id="innerMemo" cols="30" rows="10"></textarea>
+    <button type="button" id="submitBtn">등록</button>
+    <ul id="show"></ul>
+    
+    <script>
+        const textareaText = document.getElementById('innerMemo');
+        const submitBtn = document.getElementById('submitBtn');
+        const showUl = document.getElementById('show');
+        const memeArr=[];
+        let num =0;
+
+        if(localStorage.getItem('메모리스트')){
+            memeArr.push(...localStorage.getItem('메모리스트').split(','));
+            for (const memo of memeArr) {
+                listMaking(memo);
+            }
+        }
+        showUl.addEventListener(('click'),(e)=>{
+            if(e.target.classList.contains('btnDelete')){
+                const parentLi = e.target.parentElement;
+                parentLi.remove();
+                console.log(localStorage.getItem('메모리스트').split(','));
+                console.log(parentLi.innerText);
+                const newList = localStorage.getItem('메모리스트').split(',').filter(x=>x !==parentLi.innerText.slice(0,-2))
+                localStorage.setItem('메모리스트',newList);
+                
+            }
+        });
+
+        submitBtn.addEventListener('click',(e)=>{
+            const memoText = textareaText.value;
+            memeArr.push(memoText);
+            localStorage.setItem('메모리스트',memeArr);
+            listMaking(memoText);
+        });
+        
+        function listMaking(txt){
+            const liEl = document.createElement('li');
+            const btnEl = document.createElement('button');
+
+            btnEl.type='button';
+            btnEl.textContent='삭제';
+            btnEl.classList.add('btnDelete');
+
+            liEl.innerText=txt;
+            liEl.appendChild(btnEl);
+            showUl.appendChild(liEl);            
+        }
+
+    </script>
+</body>
+</html>
