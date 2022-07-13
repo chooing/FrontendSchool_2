@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, Timestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
@@ -11,13 +11,14 @@ const firebaseConfig = {
     appId: process.env.REACT_APP_APP_ID,
 };
 
-//파이어베이스 시작
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-//파이어베이스 초기화
+// 파이어스토어 초기화
 const appFireStore = getFirestore(app);
-
 // 인증 초기화
 const appAuth = getAuth();
 
-export { appFireStore, appAuth };
+// 타임스탬프
+const timeStamp = Timestamp;
+
+export { appFireStore, appAuth, timeStamp };

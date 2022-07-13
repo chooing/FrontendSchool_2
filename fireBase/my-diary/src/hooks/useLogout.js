@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 import { appAuth } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext";
 import { signOut } from "firebase/auth";
@@ -12,17 +12,15 @@ export const useLogout = () => {
         setError(null);
         setIsPending(true);
 
-        signOut(appAuth)
-            .then(() => {
-                dispatch({ type: "logout" });
-                setError(null);
-                setIsPending(false);
-            })
-            .catch((error) => {
-                setError(error.message);
-                setIsPending(false);
-            });
-    };
+        signOut(appAuth).then(() => {
+            dispatch({ type: 'logout' });
+            setError(null);
+            setIsPending(false);
+        }).catch((error) => {
+            setError(error.message);
+            setIsPending(false);
+        });
+    }
 
-    return { error, isPending, logout };
-};
+    return { error, isPending, logout }
+}

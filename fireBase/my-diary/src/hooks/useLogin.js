@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState } from "react"
 import { appAuth } from "../firebase/config";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useAuthContext } from "./useAuthContext";
 
+
 export const useLogin = () => {
-    // 에러 정보를 저장합니다
+
+    // 에러 정보를 저장합니다.
     const [error, setError] = useState(null);
-    //서버와의 통신상태를 저장합니다.
+    // 서버와의 통신상태를 저장합니다.
     const [isPending, setIsPending] = useState(false);
 
     const { dispatch } = useAuthContext();
@@ -21,18 +23,19 @@ export const useLogin = () => {
                 setError(null);
                 setIsPending(false);
                 const user = userCredential.user;
-                dispatch({ type: "login", payload: user });
+                dispatch({ type: 'login', payload: user });
                 console.log(user);
                 if (!user) {
-                    throw new Error("로그인에 실패");
+                    throw new Error('회원가입이 실패했습니다.');
                 }
+
             })
             .catch((error) => {
                 setError(error.message);
                 setIsPending(false);
                 console.log(error.message);
             });
-    };
+    }
 
-    return { error, isPending, login };
-};
+    return { error, isPending, login }
+}
